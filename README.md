@@ -1,4 +1,4 @@
-# 剑网三咩咩 · astrbot_plugin_jx3_miemie
+# 剑网3咩咩 · astrbot_plugin_jx3_miemie
 <p align="center">
   <img src="logo.png" alt="astrbot_plugin_jx3" width="160">
 </p>
