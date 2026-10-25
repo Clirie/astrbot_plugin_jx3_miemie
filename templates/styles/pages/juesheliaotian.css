@@ -1,0 +1,67 @@
+.role-col {
+        color: var(--jx3-text);
+        font-weight: 700;
+        word-break: break-word;
+    }
+
+    /* 消息列 */
+    .message-col {
+        color: var(--jx3-text-secondary);
+        font-weight: 600;
+        line-height: 1.65;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
+
+    /* 时间列 */
+    .time-col {
+        color: #757b8f;
+        white-space: nowrap;
+    }
+
+    /* 频道标签 */
+    .channel-tag {
+        display: inline-block;
+        min-width: 58px;
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .channel-world {
+        color: #d93939;
+        border: 1px solid #f3bcbc;
+        background: #fff0f0;
+    }
+
+    .channel-school {
+        color: #7d43b7;
+        border: 1px solid #d8c0ef;
+        background: #f6effd;
+    }
+
+    .channel-team {
+        color: #197d5b;
+        border: 1px solid #b8e4d5;
+        background: #edf9f5;
+    }
+
+    .channel-map {
+        color: #1e6bd6;
+        border: 1px solid #bdd3f5;
+        background: #eef5ff;
+    }
+
+    .channel-other {
+        color: #666666;
+        border: 1px solid #d8d8d8;
+        background: #f4f4f4;
+    }
+
+    .empty-row td {
+        padding: 50px 20px;
+        color: #8a8fa3;
+        font-size: 19px;
+    }

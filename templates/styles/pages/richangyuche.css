@@ -1,0 +1,52 @@
+/* ====== 日历网格 ====== */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 14px;
+}
+
+/* 表头 */
+.week {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--jx3-text-secondary);
+}
+
+/* 卡片基础 */
+.card {
+    min-height: 120px;
+    border-radius: 12px;
+    padding: 12px;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+/* 状态样式 */
+.card.past {
+    background: #e2e7eb;
+    color: #4d5d6b;
+}
+
+.card.today {
+    background: #d9ebf8;
+    color: #123e60;
+    border: 2px solid #397aab;
+}
+
+.card.future {
+    background: var(--jx3-surface);
+    color: var(--jx3-text);
+    border: 1px solid var(--jx3-border-faint);
+}
+
+/* 内容 */
+.date {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.line {
+    font-size: 20px;
+    margin-top: 6px;
+}

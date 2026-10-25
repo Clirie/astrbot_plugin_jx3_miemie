@@ -1,0 +1,54 @@
+{# template-title: 剑网3交易行价格查询 #}
+{# template-components: data-table #}
+
+<div class="container">
+    <div class="header">
+        <h1>交易行：{{ search_name }} · {{ server }}</h1>
+        <div class="meta">
+            <span>展示 {{ result_count }} 条价格数据</span>
+            <span>匹配 {{ matched_count }} 个物品</span>
+            <span>生成时间：{{ update_time }}</span>
+        </div>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="data-table data-table--nowrap">
+            <thead>
+                <tr>
+                    <th>物品</th>
+                    <th>物价</th>
+                    <th>数量</th>
+                    <th>数据时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in list %}
+                <tr>
+                    <td>
+                        <div class="trade-item icon-label">
+                            <img class="item-icon" src="{{ item.icon }}" alt="">
+                            <div class="item-name">{{ item.name }}</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="price">
+                            {% if item.price_parts %}
+                                {% for part in item.price_parts %}
+                                <span class="money-part">
+                                    <span>{{ part.value }}</span>
+                                    <img class="money-icon" src="{{ icons.img[part.key] }}" alt="{{ part.name }}">
+                                </span>
+                                {% endfor %}
+                            {% else %}
+                                <span>无价格</span>
+                            {% endif %}
+                        </div>
+                    </td>
+                    <td class="sample">{{ item.sample }}</td>
+                    <td class="time">{{ item.created }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

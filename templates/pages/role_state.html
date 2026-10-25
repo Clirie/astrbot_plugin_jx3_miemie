@@ -1,0 +1,71 @@
+{# 推栏角色状态页（注：非「游戏在线」状态） #}
+<div class="rs-card">
+  <div class="rs-head">
+    {% if avatar %}<img class="rs-avatar" src="{{ avatar }}" alt="" />{% endif %}
+    <div class="rs-title">
+      <h1>{{ name }}</h1>
+      <div class="rs-sub">{{ zone }} · {{ server }}</div>
+    </div>
+    <span class="rs-badge{% if cardActive %} rs-badge--on{% endif %}">{{ activeText }}</span>
+  </div>
+
+  <div class="rs-grid">
+    <div class="rs-item"><span>门派</span><strong>{{ force }}</strong></div>
+    <div class="rs-item"><span>体型</span><strong>{{ body }}</strong></div>
+    <div class="rs-item"><span>阵营</span><strong>{{ camp }}</strong></div>
+    <div class="rs-item"><span>帮会</span><strong>{{ tong or '无' }}</strong></div>
+    <div class="rs-item"><span>角色 ID</span><strong>{{ roleId }}</strong></div>
+    <div class="rs-item"><span>名片点赞</span><strong>{{ likes }}</strong></div>
+  </div>
+
+  <div class="rs-section">
+    <div class="rs-section__title">最近名剑战绩（33）</div>
+    {% if recentCount %}
+      <table class="rs-table">
+        <thead><tr><th>时间</th><th>心法</th><th class="num">分数</th></tr></thead>
+        <tbody>
+        {% for r in recent %}
+          <tr>
+            <td>{{ r.get('time') or r.get('date') or '' }}</td>
+            <td>{{ r.get('kungfu') or r.get('forceName') or '' }}</td>
+            <td class="num">{{ r.get('score') or r.get('grade') or '' }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <div class="rs-empty">近期没有 33 名剑战绩记录</div>
+    {% endif %}
+  </div>
+
+  <div class="rs-note">⚠️ 游戏内「在线/离线」需用 `角色在线` 指令（依赖第三方服务）</div>
+</div>
+
+<style>
+.rs-card{background:#fff;border:1px solid #e8e6df;border-radius:14px;padding:20px 22px;
+         font-family:"Microsoft YaHei","PingFang SC",sans-serif;color:#1f1e1d;max-width:820px}
+.rs-head{display:flex;align-items:center;gap:14px;padding-bottom:14px;
+         border-bottom:1px solid #e8e6df;margin-bottom:14px}
+.rs-avatar{width:64px;height:64px;border-radius:12px;object-fit:cover;background:#f5f4ef}
+.rs-title h1{margin:0;font-size:24px}
+.rs-sub{color:#85837c;font-size:13px;margin-top:2px}
+.rs-badge{margin-left:auto;font-size:13px;color:#85837c;background:#f5f4ef;
+          border:1px solid #e8e6df;border-radius:999px;padding:4px 12px}
+.rs-badge--on{color:#c96442;background:#fdf1ec;border-color:#f2d9cd}
+.rs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rs-item{background:#f7f6f2;border-radius:10px;padding:9px 12px}
+.rs-item span{display:block;font-size:12px;color:#85837c}
+.rs-item strong{font-size:15px}
+.rs-section{margin-top:16px}
+.rs-section__title{font-size:15px;font-weight:700;margin-bottom:8px;
+                   display:flex;align-items:center;gap:8px}
+.rs-section__title::before{content:"";width:4px;height:14px;border-radius:2px;background:#c96442}
+.rs-table{width:100%;border-collapse:collapse}
+.rs-table th{padding:6px 4px 8px;font-size:13px;font-weight:500;color:#b0ada4;
+             text-align:left;border-bottom:1px solid #f2f0ea}
+.rs-table td{padding:8px 4px;font-size:14px;color:#4a4945;border-bottom:1px solid #f7f6f2}
+.rs-table .num{text-align:right;font-weight:700;color:#c96442}
+.rs-empty{color:#b0ada4;font-size:13px;padding:10px 0}
+.rs-note{margin-top:16px;padding-top:10px;border-top:1px dashed #e8e6df;
+         font-size:12px;color:#a8a49b;line-height:1.6}
+</style>

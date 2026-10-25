@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>团本 CD</title>
+<style>
+/*__INK_CSS__*/
+*{box-sizing:border-box}html,body{margin:0;padding:0}body{font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}h1,p{margin:0}
+.sheet{position:relative;isolation:isolate;width:960px;padding:64px 54px 52px;background:var(--paper)}.scene-top{opacity:.65}.scene-bottom{opacity:.34}
+header{position:relative;text-align:center;margin-bottom:32px}h1{font-family:var(--brush);font-size:68px;font-weight:400;line-height:1.18;font-synthesis:none;overflow-wrap:anywhere}.subtitle{font-size:24px;letter-spacing:2px;margin-top:8px;color:var(--sub)}
+table{position:relative;width:100%;border-collapse:collapse;table-layout:fixed}th{font-size:22px;font-weight:400;color:var(--sub);text-align:left;padding:12px 10px;border-bottom:1px solid var(--rule)}td{border-bottom:1px solid var(--rule);padding:17px 10px;vertical-align:middle;font-size:23px;line-height:1.45;overflow-wrap:anywhere}
+.col-name{width:28%}.col-mode{width:18%}.col-progress{width:54%}.mode{font-family:var(--numbers);font-size:21px;color:var(--sub)}.category td{padding:19px 10px 8px;font-size:21px;border-bottom:1px solid var(--rule);color:var(--cinnabar);letter-spacing:2px}.weekly{display:block;margin-top:3px;color:var(--sub);font-size:18px}.recorded{background:rgba(249,246,237,.45)}.no-record{color:#536b5e;font-size:21px}.unknown{color:var(--sub);font-size:20px}.progress-summary{font-size:19px;color:var(--sub);margin-bottom:8px;font-family:var(--numbers)}.boss-list{display:flex;flex-wrap:wrap;gap:7px 8px}.boss{display:flex;align-items:baseline;gap:5px;border-radius:3px;padding:5px 9px;font-size:20px;line-height:1.35;background:rgba(104,110,107,.13);color:#5d625e}.boss.pending{color:#365c49;background:rgba(88,126,100,.11)}.boss.unknown{color:var(--sub);background:rgba(150,131,100,.1)}.boss-mark{font-family:var(--numbers);font-size:17px;white-space:nowrap}
+footer{position:relative;margin-top:22px;color:var(--sub);font-size:18px;line-height:1.6}.legend{display:flex;gap:22px;align-items:center}.legend span{display:flex;align-items:center;gap:7px}.swatch{display:inline-block;width:17px;height:12px;background:rgba(104,110,107,.24);border-radius:2px}.swatch.pending{background:rgba(88,126,100,.22)}.date{margin-top:7px;font-family:var(--numbers)}.empty{text-align:center;padding:35px;color:var(--sub)}
+</style>
+</head><body>{% autoescape true %}
+<main class="sheet"><div class="scene scene-top" aria-hidden="true"></div><div class="scene scene-bottom" aria-hidden="true"></div>
+<header><h1>{{name}}</h1><p class="subtitle">{{server}} · 团本 CD</p></header>
+<table><colgroup><col class="col-name"><col class="col-mode"><col class="col-progress"></colgroup>
+<thead><tr><th>副本</th><th>难度</th><th>首领进度</th></tr></thead><tbody>
+{% for raid in raids %}
+{% if loop.changed(raid.category) %}<tr class="category"><td colspan="3">{{raid.category}}</td></tr>{% endif %}
+<tr{% if raid.recorded %} class="recorded"{% endif %}>
+<td>{{raid.name}}{% if raid.weekly and raid.category != '本周周常' %}<span class="weekly">本周周常</span>{% endif %}</td>
+<td class="mode">{{raid.mode}}</td><td>
+{% if raid.recorded and raid.bosses %}
+<div class="progress-summary">已有 CD {{raid.finished}} / {{raid.total}}</div>
+<div class="boss-list">{% for boss in raid.bosses %}
+<span class="boss {% if boss.finished is sameas false %}pending{% elif boss.finished is none %}unknown{% endif %}"><span class="boss-mark">{% if boss.finished is sameas true %}✓{% elif boss.finished is sameas false %}○{% else %}?{% endif %}</span>{{boss.name}}</span>
+{% endfor %}</div>
+{% elif raid.recorded %}<span class="unknown">首领进度待同步</span>
+{% else %}<span class="no-record">无 CD 记录</span>{% endif %}
+</td></tr>
+{% else %}<tr><td colspan="3" class="empty">暂无副本 CD 记录</td></tr>{% endfor %}
+</tbody></table>
+<footer><div class="legend"><span><i class="swatch"></i>✓ 已有 CD</span><span><i class="swatch pending"></i>○ 无 CD</span><span>进度与推栏同步</span></div><p class="date" data-jx3-data-time>{{data_time|default('')}}</p></footer>
+</main>{% endautoescape %}
+<script>if(innerWidth!==960){document.body.style.width='960px';document.body.style.zoom=String(innerWidth/960);}document.fonts.ready.then(()=>{document.documentElement.dataset.ready='true';});</script>
+</body></html>

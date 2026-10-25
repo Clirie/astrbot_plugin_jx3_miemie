@@ -1,0 +1,779 @@
+[
+  {
+    "id": "major_00",
+    "filename": "major_00.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/RWS1909_-_00_Fool.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_00_Fool.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "889fae03c0ddd4918de6e8c8801874181d017245421b3246897295f0da00247b",
+    "bytes": 285790
+  },
+  {
+    "id": "major_01",
+    "filename": "major_01.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/RWS1909_-_01_Magician.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_01_Magician.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "e5aa3df345d9ea9f1a2155b9c86d8c3342569ec67d1cedd4a2756e9eed6e7100",
+    "bytes": 249220
+  },
+  {
+    "id": "major_02",
+    "filename": "major_02.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/26/RWS1909_-_02_High_Priestess.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_02_High_Priestess.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "1d43b8da0ea05f2359caa2d1e4ddff4e8a008968bfd4fdfed1e0a521ae3686e0",
+    "bytes": 277326
+  },
+  {
+    "id": "major_03",
+    "filename": "major_03.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/70/RWS1909_-_03_Empress.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_03_Empress.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "ff13b579cad45d32f5a98b0fb323e9a6fab5ea6082613d5b1b33972f563b5161",
+    "bytes": 298148
+  },
+  {
+    "id": "major_04",
+    "filename": "major_04.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/RWS1909_-_04_Emperor.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_04_Emperor.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "357702d260530fced6d22e91b5d9a29da7bb3210365af99ca4b301467fd39975",
+    "bytes": 308069
+  },
+  {
+    "id": "major_05",
+    "filename": "major_05.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/70/RWS1909_-_05_Hierophant.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_05_Hierophant.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "f68645f05b578cbb2efaa9ab7c4d14a30e7b9eaca3567d237b446568f21ea8d3",
+    "bytes": 287944
+  },
+  {
+    "id": "major_06",
+    "filename": "major_06.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/RWS1909_-_06_Lovers.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_06_Lovers.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "11aa508b03fcf5c4542a77a0f4fcb36450193f7aaab05048aea3aff97e32657b",
+    "bytes": 352215
+  },
+  {
+    "id": "major_07",
+    "filename": "major_07.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/RWS1909_-_07_Chariot.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_07_Chariot.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "791984b33e757222e9a64eb139a2cdbcd70034236d739fa0aeec7170d67494b7",
+    "bytes": 279161
+  },
+  {
+    "id": "major_08",
+    "filename": "major_08.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/RWS1909_-_08_Strength.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_08_Strength.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "115fc565055ec61dd037d1127f31e463defa17db0531969e133b00df9902b76c",
+    "bytes": 238076
+  },
+  {
+    "id": "major_09",
+    "filename": "major_09.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/RWS1909_-_09_Hermit.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_09_Hermit.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "27ed36b8579f553f5ed00407fa059d01d52d710454a300ccabecb7063d615bd6",
+    "bytes": 240315
+  },
+  {
+    "id": "major_10",
+    "filename": "major_10.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/RWS1909_-_10_Wheel_of_Fortune.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_10_Wheel_of_Fortune.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "883f5e41b2d9697d42785c37ddbd3b70c13a169edc49a0313b9b85bdfe1f1fb0",
+    "bytes": 339256
+  },
+  {
+    "id": "major_11",
+    "filename": "major_11.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/RWS1909_-_11_Justice.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_11_Justice.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "969039bf40d59837850ee000a2f3c494f09554b359097256c5f63f8fecc31f18",
+    "bytes": 281592
+  },
+  {
+    "id": "major_12",
+    "filename": "major_12.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/RWS1909_-_12_Hanged_Man.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_12_Hanged_Man.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "39b0b223a8541a68e957c944c302bb414473903abb79d0cba5905961018cf4fb",
+    "bytes": 258309
+  },
+  {
+    "id": "major_13",
+    "filename": "major_13.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/RWS1909_-_13_Death.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_13_Death.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "4a7acac293935b022890843e11d5059fdeaa7930e1752cab918b5b3f79fd24fe",
+    "bytes": 286734
+  },
+  {
+    "id": "major_14",
+    "filename": "major_14.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/RWS1909_-_14_Temperance.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_14_Temperance.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "91855cf4c4d98f2c8d89d8d9c1574768c81d0979d05619cb8f4065259f60f5e0",
+    "bytes": 303909
+  },
+  {
+    "id": "major_15",
+    "filename": "major_15.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/26/RWS1909_-_15_Devil.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_15_Devil.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "f46c1904785439f26b6b054477b67488142c26d5fc87235d472d1d2b3e93981a",
+    "bytes": 351037
+  },
+  {
+    "id": "major_16",
+    "filename": "major_16.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/RWS1909_-_16_Tower.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_16_Tower.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "e1a8a02bc16dc524b9b4e2db4480fd648ddb2db90f327d5285d76e5c274e5951",
+    "bytes": 273786
+  },
+  {
+    "id": "major_17",
+    "filename": "major_17.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/RWS1909_-_17_Star.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_17_Star.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "3e2579ec903c6126699a51733671d9237a90a2671d3e9fc2c4adad8cc38e7d49",
+    "bytes": 310556
+  },
+  {
+    "id": "major_18",
+    "filename": "major_18.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/RWS1909_-_18_Moon.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_18_Moon.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "1d576eca8f4703770cf230b23155451af6c0171add51036d43597322e42c75e5",
+    "bytes": 322903
+  },
+  {
+    "id": "major_19",
+    "filename": "major_19.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/RWS1909_-_19_Sun.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_19_Sun.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/RWS1909_-_19_Sun.jpeg",
+    "sha256": "864ce813adcdce64260037b3b6c7a45f7556f674e2cdec7756ed5eb2889b88e6",
+    "bytes": 323531
+  },
+  {
+    "id": "major_20",
+    "filename": "major_20.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/RWS1909_-_20_Judgement.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_20_Judgement.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/RWS1909_-_20_Judgement.jpeg",
+    "sha256": "103432ece8efbc3e900cd24e0ebc79de944efaf658154c7bd44f732c9bf77e69",
+    "bytes": 324854
+  },
+  {
+    "id": "major_21",
+    "filename": "major_21.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/RWS1909_-_21_World.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_21_World.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/RWS1909_-_21_World.jpeg",
+    "sha256": "7ec15febe913d061b8bf7fca99cc2304a91c56e7f1e520fcc820fc8e0463d823",
+    "bytes": 321040
+  },
+  {
+    "id": "cups_01",
+    "filename": "cups_01.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/RWS1909_-_Cups_01.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Cups_01.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "5fc92ca4221579ece7c09ceed820ecc88bd581b2ddd68420dfe40d2a89910a75",
+    "bytes": 260497
+  },
+  {
+    "id": "cups_02",
+    "filename": "cups_02.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/RWS1909_-_Cups_02.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Cups_02.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/RWS1909_-_Cups_02.jpeg",
+    "sha256": "bbe7054640ef5b16b3b2aa715afa6e269f03d3bff3ee765144ed771820ba8b8f",
+    "bytes": 279993
+  },
+  {
+    "id": "cups_03",
+    "filename": "cups_03.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/RWS1909_-_Cups_03.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Cups_03.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/RWS1909_-_Cups_03.jpeg",
+    "sha256": "a09e9fce565e8dfd7a07923ae413e482ff47b75c1cf8f45d13cb5aa549cdb66e",
+    "bytes": 326724
+  },
+  {
+    "id": "cups_04",
+    "filename": "cups_04.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/RWS1909_-_Cups_04.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Cups_04.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/RWS1909_-_Cups_04.jpeg",
+    "sha256": "2ab922dfa0f9dac26be9cfe2a542073e584f5018291083ee812104b9bb67bf88",
+    "bytes": 282885
+  },
+  {
+    "id": "cups_05",
+    "filename": "cups_05.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/RWS1909_-_Cups_05.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Cups_05.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/RWS1909_-_Cups_05.jpeg",
+    "sha256": "d1c6b168e723135a3e7e3f3fc952cd9f9c9f63ce4c32921e620446c33a6ec530",
+    "bytes": 214150
+  },
+  {
+    "id": "cups_06",
+    "filename": "cups_06.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/RWS1909_-_Cups_06.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Cups_06.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/RWS1909_-_Cups_06.jpeg",
+    "sha256": "6f363d904e534ddcc13a1577803fd819d88ac64d99191b1fe854f5cc6950183f",
+    "bytes": 299769
+  },
+  {
+    "id": "cups_07",
+    "filename": "cups_07.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/RWS1909_-_Cups_07.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Cups_07.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/RWS1909_-_Cups_07.jpeg",
+    "sha256": "618fadd41324a8a029daddd987a8bef426c5634e46b5c5d02bd3aa0c8a398520",
+    "bytes": 306762
+  },
+  {
+    "id": "cups_08",
+    "filename": "cups_08.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/RWS1909_-_Cups_08.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Cups_08.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/RWS1909_-_Cups_08.jpeg",
+    "sha256": "bd8896083ba2c3d7cdb245ed9dae4528a0637a527f45bced93b6f6ed89c1b9fc",
+    "bytes": 257546
+  },
+  {
+    "id": "cups_09",
+    "filename": "cups_09.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/RWS1909_-_Cups_09.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Cups_09.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/RWS1909_-_Cups_09.jpeg",
+    "sha256": "b6187e1e0248eab57db2846fdd9ce65d4b4bead4b39998f45dbb994e4c113ad4",
+    "bytes": 252646
+  },
+  {
+    "id": "cups_10",
+    "filename": "cups_10.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/RWS1909_-_Cups_10.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Cups_10.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "1f8d98f30fc898927c41deac233e52eda126260a5144e1f8264f3803d23d05d7",
+    "bytes": 319153
+  },
+  {
+    "id": "cups_page",
+    "filename": "cups_page.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/RWS1909_-_Cups_11.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Cups_11.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/RWS1909_-_Cups_11.jpeg",
+    "sha256": "1269eb8aac06ab056c5e89280a35e93e91b7f5d6c9c5541fff94f5ce40452cfb",
+    "bytes": 297219
+  },
+  {
+    "id": "cups_knight",
+    "filename": "cups_knight.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/RWS1909_-_Cups_12.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Cups_12.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/RWS1909_-_Cups_12.jpeg",
+    "sha256": "8973fdad4545eebe527756e0ab41892c1d06cf7bde315ebb7a507ad5700935b6",
+    "bytes": 273220
+  },
+  {
+    "id": "cups_queen",
+    "filename": "cups_queen.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/RWS1909_-_Cups_13.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Cups_13.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/RWS1909_-_Cups_13.jpeg",
+    "sha256": "24ce4bd36d361e3484bf4b67fbbf3a063418588e3ec73da670135e626ba0f502",
+    "bytes": 278785
+  },
+  {
+    "id": "cups_king",
+    "filename": "cups_king.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/RWS1909_-_Cups_14.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Cups_14.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/RWS1909_-_Cups_14.jpeg",
+    "sha256": "48e79018e323ce1645077566f7bb9c0385729fe1105ba7aeb6d8ae4e4bcf0381",
+    "bytes": 274600
+  },
+  {
+    "id": "pentacles_01",
+    "filename": "pentacles_01.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/RWS1909_-_Pentacles_01.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Pentacles_01.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/RWS1909_-_Pentacles_01.jpeg",
+    "sha256": "03b9001caafe05556965891d2861279f54bfa1fedfdfb536a77003fd33feb2f0",
+    "bytes": 242590
+  },
+  {
+    "id": "pentacles_02",
+    "filename": "pentacles_02.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/RWS1909_-_Pentacles_02.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Pentacles_02.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/RWS1909_-_Pentacles_02.jpeg",
+    "sha256": "330f5a87f433e005680c514b50814a7b0daeb58e15876f3fb83fc92d64581f6c",
+    "bytes": 298555
+  },
+  {
+    "id": "pentacles_03",
+    "filename": "pentacles_03.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/RWS1909_-_Pentacles_03.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Pentacles_03.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/RWS1909_-_Pentacles_03.jpeg",
+    "sha256": "b605ac243a94c28b97b3bbf1dde7caecd02eeb90a42b1cc1ea4604fcd75aabb0",
+    "bytes": 345119
+  },
+  {
+    "id": "pentacles_04",
+    "filename": "pentacles_04.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/RWS1909_-_Pentacles_04.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Pentacles_04.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/RWS1909_-_Pentacles_04.jpeg",
+    "sha256": "1d83adb2c14010569ccae0fc02c2434a9f3e364e0f2df2ba91860e285567d928",
+    "bytes": 247667
+  },
+  {
+    "id": "pentacles_05",
+    "filename": "pentacles_05.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/RWS1909_-_Pentacles_05.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Pentacles_05.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/RWS1909_-_Pentacles_05.jpeg",
+    "sha256": "3f5fd1fc7c2998324578bcd06ded8f26dbb5ae7d188c4a5247a11e6bac5b793f",
+    "bytes": 295415
+  },
+  {
+    "id": "pentacles_06",
+    "filename": "pentacles_06.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/RWS1909_-_Pentacles_06.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Pentacles_06.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/RWS1909_-_Pentacles_06.jpeg",
+    "sha256": "b319a9998d67a6742ed77d0c7de8d0e1a022c2026642aca41cf6aa1c64261cc5",
+    "bytes": 250711
+  },
+  {
+    "id": "pentacles_07",
+    "filename": "pentacles_07.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/51/RWS1909_-_Pentacles_07.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Pentacles_07.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/RWS1909_-_Pentacles_07.jpeg",
+    "sha256": "1cfb2615c67cd81f97a53745844f0a89fddfbf36d3bc37a4a8631e9d743deef0",
+    "bytes": 307445
+  },
+  {
+    "id": "pentacles_08",
+    "filename": "pentacles_08.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/RWS1909_-_Pentacles_08.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Pentacles_08.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/RWS1909_-_Pentacles_08.jpeg",
+    "sha256": "708ef93dddb4f8f011a916052289b58787649347ae89eb4db912dfad7653340a",
+    "bytes": 261207
+  },
+  {
+    "id": "pentacles_09",
+    "filename": "pentacles_09.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/RWS1909_-_Pentacles_09.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Pentacles_09.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "cd7f70ce84193e1c548805af0371585eb90839f8565f6e2fff16117ade39ca24",
+    "bytes": 262124
+  },
+  {
+    "id": "pentacles_10",
+    "filename": "pentacles_10.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/RWS1909_-_Pentacles_10.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Pentacles_10.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/RWS1909_-_Pentacles_10.jpeg",
+    "sha256": "e0321b700be0fa8a3f73ba5df10ef024000f26c32843690d4d38daaf276e77df",
+    "bytes": 288046
+  },
+  {
+    "id": "pentacles_page",
+    "filename": "pentacles_page.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/RWS1909_-_Pentacles_11.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Pentacles_11.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/RWS1909_-_Pentacles_11.jpeg",
+    "sha256": "4d20ae2e2e97dca4d0d3b3d95d00458ff4d0483125f32ecabd144423a189ffde",
+    "bytes": 244348
+  },
+  {
+    "id": "pentacles_knight",
+    "filename": "pentacles_knight.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/RWS1909_-_Pentacles_12.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Pentacles_12.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/RWS1909_-_Pentacles_12.jpeg",
+    "sha256": "64cdac9ba94ea71c8675d456c6b94e7ab956f3db45a944b3585b9c1d5a730d20",
+    "bytes": 244638
+  },
+  {
+    "id": "pentacles_queen",
+    "filename": "pentacles_queen.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/RWS1909_-_Pentacles_13.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Pentacles_13.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/RWS1909_-_Pentacles_13.jpeg",
+    "sha256": "5c4da762b508ced686889a81a6b4d274d6f1a5521ec0dfac78ff50cf00c689f7",
+    "bytes": 360963
+  },
+  {
+    "id": "pentacles_king",
+    "filename": "pentacles_king.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/RWS1909_-_Pentacles_14.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Pentacles_14.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/RWS1909_-_Pentacles_14.jpeg",
+    "sha256": "4e34780f06ecb0d0207f0c87b4de8ec6ea067992b5f13cd00bb2799f97e6bb38",
+    "bytes": 282351
+  },
+  {
+    "id": "swords_01",
+    "filename": "swords_01.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/RWS1909_-_Swords_01.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Swords_01.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/RWS1909_-_Swords_01.jpeg",
+    "sha256": "9c0b23e1b5046a38a528955b7936de6f293d5c6800916e8e3a191a28b3f47640",
+    "bytes": 245669
+  },
+  {
+    "id": "swords_02",
+    "filename": "swords_02.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/RWS1909_-_Swords_02.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Swords_02.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/RWS1909_-_Swords_02.jpeg",
+    "sha256": "683e913500e13e142069ffbbf958bf0d199389085533ddd91224649131402f56",
+    "bytes": 245680
+  },
+  {
+    "id": "swords_03",
+    "filename": "swords_03.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/RWS1909_-_Swords_03.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Swords_03.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/RWS1909_-_Swords_03.jpeg",
+    "sha256": "d15c9f3ddfb34a2ec51e89515ca7541536561d9eb9f210339fbcb75fdf9c73dc",
+    "bytes": 212563
+  },
+  {
+    "id": "swords_04",
+    "filename": "swords_04.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/RWS1909_-_Swords_04.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Swords_04.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Swords_04.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "5e274dd72e170edcd80e0af5b21c67d60b830bade46b0168348b43d92932bfbe",
+    "bytes": 245437
+  },
+  {
+    "id": "swords_05",
+    "filename": "swords_05.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/RWS1909_-_Swords_05.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Swords_05.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Swords_05.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "b680f17c65b5b2e0ac0a92d70b0178e2a1f9e4dda61816e26594a217a5eb3ad5",
+    "bytes": 313195
+  },
+  {
+    "id": "swords_06",
+    "filename": "swords_06.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/RWS1909_-_Swords_06.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Swords_06.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Swords_06.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "0ff17f2714a2937af75346da6dfcd791cbf764ada2ab9c4a89062d96975d73fd",
+    "bytes": 259245
+  },
+  {
+    "id": "swords_07",
+    "filename": "swords_07.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/26/RWS1909_-_Swords_07.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Swords_07.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Swords_07.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "fc393357fc9f632600f8d1abca48ee0a3fc0f25310d4c17b03e1e3019ae6e702",
+    "bytes": 238391
+  },
+  {
+    "id": "swords_08",
+    "filename": "swords_08.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/RWS1909_-_Swords_08.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Swords_08.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Swords_08.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "cd246c7e3f23cc988278dddb4ad38e0f46773244bc87d873d7cbeb8acc57c165",
+    "bytes": 254971
+  },
+  {
+    "id": "swords_09",
+    "filename": "swords_09.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/RWS1909_-_Swords_09.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Swords_09.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "d8ded085df0868492e048b70974d9dd6461be77a066c7eeff8596244fba4d466",
+    "bytes": 312975
+  },
+  {
+    "id": "swords_10",
+    "filename": "swords_10.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/RWS1909_-_Swords_10.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Swords_10.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Swords_10.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "000c7db7c41c1f1a082359a82b3a86519e246c56235df7c292e2fa06b0bad046",
+    "bytes": 261476
+  },
+  {
+    "id": "swords_page",
+    "filename": "swords_page.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/RWS1909_-_Swords_11.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Swords_11.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Swords_11.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "14aeb106c2a96e5c274134f1d9c955a3ea76d99f5c9df207161cf26bd381a51e",
+    "bytes": 253590
+  },
+  {
+    "id": "swords_knight",
+    "filename": "swords_knight.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/RWS1909_-_Swords_12.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Swords_12.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Swords_12.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "34459dac9c86d4ec7739c339307689a958e4e0805264a0aebde6105d1eaa6591",
+    "bytes": 262860
+  },
+  {
+    "id": "swords_queen",
+    "filename": "swords_queen.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/RWS1909_-_Swords_13.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Swords_13.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Swords_13.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "68e0be383d9395028497f433cb828791d065a0e513dc4ab12f552d210ec2043f",
+    "bytes": 264036
+  },
+  {
+    "id": "swords_king",
+    "filename": "swords_king.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/RWS1909_-_Swords_14.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Swords_14.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Swords_14.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "ee1d243fc0b8135a2eaa8eb7a97eafbc2a157735e99a48694ac0696a0c8469b1",
+    "bytes": 286202
+  },
+  {
+    "id": "wands_01",
+    "filename": "wands_01.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/RWS1909_-_Wands_01.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Wands_01.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Wands_01.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "959fe06880c991e8e5afac1feced25e7675588545d81a15a9e00e493f6df590f",
+    "bytes": 234664
+  },
+  {
+    "id": "wands_02",
+    "filename": "wands_02.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/RWS1909_-_Wands_02.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Wands_02.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Wands_02.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "f11cc30acac0b7d2d4b65dc7ee8e7deb35f73692baee86b8ba910418d7d14759",
+    "bytes": 257637
+  },
+  {
+    "id": "wands_03",
+    "filename": "wands_03.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/50/RWS1909_-_Wands_03.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Wands_03.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "74dea646873a1e94d893cf5e21101aa04ee37205a82e479707417bd493bfe776",
+    "bytes": 309758
+  },
+  {
+    "id": "wands_04",
+    "filename": "wands_04.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/RWS1909_-_Wands_04.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Wands_04.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Wands_04.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "482a449bda7bfb44a195d929bdd69bc8ab060cd16d0cfd173b6435097853e2e0",
+    "bytes": 230003
+  },
+  {
+    "id": "wands_05",
+    "filename": "wands_05.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/79/RWS1909_-_Wands_05.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Wands_05.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Wands_05.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "ab072b304dfb295c6ff741a2d95469e4ae6830afc40e13f9d50933e128f3b521",
+    "bytes": 266790
+  },
+  {
+    "id": "wands_06",
+    "filename": "wands_06.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/RWS1909_-_Wands_06.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Wands_06.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Wands_06.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "388ed2ee72378c6fd4de1db542603bdc7c4fe1ce6422f19d8a0b25f1ecfac472",
+    "bytes": 269731
+  },
+  {
+    "id": "wands_07",
+    "filename": "wands_07.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/RWS1909_-_Wands_07.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Wands_07.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Wands_07.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "7fc7a0d5f4a4b25701a98d1d92311d2ccb8863386e06efac2a14a3c2aefba2d1",
+    "bytes": 264612
+  },
+  {
+    "id": "wands_08",
+    "filename": "wands_08.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/RWS1909_-_Wands_08.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Wands_08.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Wands_08.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "059f5b7e8b8e1eaf5b1070b5b8f717b700f9c49307a67b60f567baa98cbd34fc",
+    "bytes": 250818
+  },
+  {
+    "id": "wands_09",
+    "filename": "wands_09.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS1909_-_Wands_09.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Wands_09.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Wands_09.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "5805ca48f9c5759aada5ab9b5a9a9c572041c182f41884ee7625722309d6e3c3",
+    "bytes": 315705
+  },
+  {
+    "id": "wands_10",
+    "filename": "wands_10.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/RWS1909_-_Wands_10.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Wands_10.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Wands_10.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "55542e6bcc0bd7e7e0f27f0ce9ac3e644b3bf6956c57600570ee802e52fdbea2",
+    "bytes": 277561
+  },
+  {
+    "id": "wands_page",
+    "filename": "wands_page.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/RWS1909_-_Wands_11.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Wands_11.jpeg",
+    "license": "Public domain / 1909 edition",
+    "sha256": "371911a5e9c5ed8d0a4837f73343d8970406d37201e85fb0ccf96b0548c5a745",
+    "bytes": 356541
+  },
+  {
+    "id": "wands_knight",
+    "filename": "wands_knight.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/RWS1909_-_Wands_12.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Wands_12.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Wands_12.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "0ae1063d9ab8a124ed7b30b068176e42e6f170bc08eab705916045fedab677d4",
+    "bytes": 322709
+  },
+  {
+    "id": "wands_queen",
+    "filename": "wands_queen.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/50/RWS1909_-_Wands_13.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Wands_13.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Wands_13.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "1011811b9e4dd581bb4fb05a0b37d28e05adc23bd1f826b5dfa62f454514e703",
+    "bytes": 385629
+  },
+  {
+    "id": "wands_king",
+    "filename": "wands_king.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/62/RWS1909_-_Wands_14.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:RWS1909_-_Wands_14.jpeg",
+    "license": "Public domain / 1909 edition",
+    "download_url": "https://raw.githubusercontent.com/henryperkins/tarot/cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f/public/images/cards/RWS1909_-_Wands_14.jpeg",
+    "mirror_commit": "cab0d262e397ad2dc2d25bb5fb08fe8934e97f8f",
+    "sha256": "17d6b42ff6be64f1e0c9f44462825653fb0ed29ca10c3fca1713b2343fe34f6c",
+    "bytes": 357455
+  }
+]

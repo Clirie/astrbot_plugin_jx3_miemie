@@ -1,0 +1,32 @@
+{# template-title: 试炼排行 #}
+{# template-components: data-table #}
+
+
+<div class="container data-page">
+    <h1>{{ name }} 试炼排行</h1>
+    <div class="data-page__meta">{{ server }} ｜ 更新时间：{{ update_time }}</div>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>排名</th>
+                <th>角色名</th>
+                <th>装备分数</th>
+                <th>最高层数</th>
+                <th>排名积分</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        {% for item in items %}
+            <tr>
+                <td class="data-cell--rank">{{ loop.index }}</td>
+                <td class="data-cell--name">{{ item.roleName }}</td>
+                <td class="data-cell--nowrap data-cell--numeric">{{ item.equipScore }}</td>
+                <td class="data-cell--nowrap data-cell--numeric">{{ item.maxLevel }}</td>
+                <td class="data-cell--score">{{ item.totalScore }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,4 @@
+matplotlib
+aiofiles
+aiosqlite
+aiohttp

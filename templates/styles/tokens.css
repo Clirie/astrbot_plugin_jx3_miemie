@@ -1,0 +1,123 @@
+:root {
+    /* ===== Claude 风格主题：暖白底 + 柔和描边 + 陶土橙点缀 ===== */
+    --jx3-bg-deep: #efece4;
+    --jx3-bg: #faf9f5;
+    --jx3-bg-raised: #ffffff;
+    --jx3-surface: #ffffff;
+    --jx3-surface-strong: #f7f6f2;
+    --jx3-surface-soft: #f5f4ef;
+    --jx3-surface-muted: #efeee8;
+    --jx3-border: #e3e1d9;
+    --jx3-border-strong: #d3d0c6;
+    --jx3-border-soft: rgba(31, 30, 29, 0.12);
+    --jx3-border-faint: rgba(31, 30, 29, 0.07);
+    --jx3-gold: #c96442;
+    --jx3-gold-bright: #b8522f;
+    --jx3-gold-muted: #e0a18a;
+    --jx3-text: #1f1e1d;
+    --jx3-text-secondary: #4a4945;
+    --jx3-text-muted: #85837c;
+    --jx3-blue: #5b7a99;
+    --jx3-green: #3f7a4e;
+    --jx3-red: #b4443a;
+    --jx3-purple: #7a5c9e;
+    --jx3-shadow-sm: 0 1px 2px rgba(31, 30, 29, 0.05);
+    --jx3-shadow-md: 0 6px 22px rgba(31, 30, 29, 0.07);
+    --jx3-radius-sm: 8px;
+    --jx3-radius-md: 12px;
+    --jx3-radius-lg: 16px;
+    --jx3-space-1: 4px;
+    --jx3-space-2: 8px;
+    --jx3-space-3: 12px;
+    --jx3-space-4: 16px;
+    --jx3-space-5: 20px;
+    --jx3-space-6: 24px;
+    --jx3-space-8: 32px;
+    --jx3-page-width: 1200px;
+    --jx3-font-size: 20px;
+    --jx3-font-size-small: 18px;
+    --jx3-font: "Inter", "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", "Source Han Sans SC", Arial, sans-serif;
+}
+
+.jx3-template--mingjiantongji {
+    --jx3-page-width: 640px;
+}
+
+.jx3-template--xingxiashijian {
+    --jx3-page-width: 900px;
+}
+
+.jx3-template--shilianpaixing,
+.jx3-template--zhueevent {
+    --jx3-page-width: 960px;
+}
+
+.jx3-template--jingnai,
+.jx3-template--zili {
+    --jx3-page-width: 980px;
+}
+
+.jx3-template--bilei,
+.jx3-template--mingjianpaihang,
+.jx3-template--qiyuliebiao,
+.jx3-template--yanhuan {
+    --jx3-page-width: 1000px;
+}
+
+.jx3-template--jinqiqiyu,
+.jx3-template--rank_tong0,
+.jx3-template--rank_tong1,
+.jx3-template--rank_tong2,
+.jx3-template--zilipaixing {
+    --jx3-page-width: 1040px;
+}
+
+.jx3-template--diaoluo,
+.jx3-template--qiyuhuizong,
+.jx3-template--zhenyingevent {
+    --jx3-page-width: 1080px;
+}
+
+.jx3-template--richangyuche,
+.jx3-template--zhanji {
+    --jx3-page-width: 1100px;
+}
+
+.jx3-template--jiaoyihang,
+.jx3-template--jineng,
+.jx3-template--qixue,
+.jx3-template--rank_role {
+    --jx3-page-width: 1120px;
+}
+
+.jx3-template--bangzhanjilu,
+.jx3-template--chengjiu,
+.jx3-template--guanaishouling {
+    --jx3-page-width: 1180px;
+}
+
+.jx3-template--dilujilu,
+.jx3-template--jinjia,
+.jx3-template--juesheliaotian,
+.jx3-template--tuanduizhaomu,
+.jx3-template--zhengyingpaimai {
+    --jx3-page-width: 1300px;
+}
+
+.jx3-template--shitu {
+    --jx3-page-width: 1280px;
+}
+
+.jx3-template--huajia,
+.jx3-template--wujia,
+.jx3-template--xiaoyao {
+    --jx3-page-width: 1400px;
+}
+
+.jx3-template--chengbeng {
+    --jx3-page-width: 1500px;
+}
+
+.jx3-template--helps {
+    --jx3-page-width: 1480px;
+}

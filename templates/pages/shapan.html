@@ -1,0 +1,78 @@
+{# template-title: 阵营沙盘 #}
+{#
+坐标调整说明：
+1. 搜索 data-castle="据点名" 定位据点。
+2. 第一个 img 的 left/top 是领地图层坐标。
+3. 第二个 img 的 left/top 是据点图标坐标。
+4. span 的 left/top 是竖排据点名坐标；帮会名和防守标识根据图标坐标自动定位。
+坐标均以 1339 × 916 的 background.png 左上角为 (0, 0)。
+#}
+
+{% set castle_map = {} %}
+{% for item in items %}
+    {% set _ = castle_map.update({item.castle_name: item}) %}
+{% endfor %}
+
+{% macro image(name) %}{{ icons.sand.get(name, '') }}{% endmacro %}
+{% macro castle(name, territory_left, territory_top, icon_name, icon_left, icon_top, name_left, name_top) %}
+    {% set item = castle_map.get(name) %}
+    {% if item %}
+        <div class="sand-castle" data-castle="{{ name }}" data-guild="{{ item.tong_name }}" data-defend-count="{{ item.defend_count }}">
+            <img class="sand-layer sand-layer--territory" style="left:{{ territory_left }}px;top:{{ territory_top }}px" src="{{ image(item.camp_key ~ '_' ~ name) }}" alt="">
+            <img class="sand-layer sand-layer--icon" style="left:{{ icon_left }}px;top:{{ icon_top }}px" src="{{ image('图标_' ~ item.camp_key ~ '_' ~ icon_name) }}" alt="">
+            <span class="sand-castle__name" style="left:{{ name_left }}px;top:{{ name_top }}px">{{ name }}</span>
+            {% if item.tong_name %}<span class="sand-castle__guild" style="left:{{ icon_left - 32 }}px;top:{{ icon_top + 42 }}px">{{ item.tong_name }}</span>{% endif %}
+            {% if item.defend_count in [1, 2, 3] %}<img class="sand-layer sand-layer--defense" style="left:{{ icon_left - 27 }}px;top:{{ icon_top + 1 }}px" src="{{ image('防御' ~ item.defend_count) }}" alt="防守{{ item.defend_count }}层">{% endif %}
+        </div>
+    {% endif %}
+{% endmacro %}
+
+<main
+    class="sand-map"
+    aria-label="{{ zone }} {{ server }}阵营沙盘，更新时间{{ update_time }}"
+    data-server="{{ server }}"
+    data-update-time="{{ update_time }}"
+>
+    <img class="sand-map__background" src="{{ image('background') }}" alt="">
+
+    <div class="sand-castle" data-castle="恶人谷">
+        <img class="sand-layer sand-layer--territory" style="left:222px;top:64px" src="{{ image('恶_恶人谷') }}" alt="">
+        <img class="sand-layer sand-layer--icon" style="left:300px;top:103px" src="{{ image('图标_恶_恶人谷') }}" alt="">
+        <span class="sand-castle__name" style="left:380px;top:103px">恶人谷</span>
+    </div>
+
+    {{ castle('凛风堡', 299, 117, '凛风堡', 435, 186, 485, 176) }}
+    {{ castle('神池岭', 260, 259, '02', 280, 288, 320, 278) }}
+    {{ castle('烈日岗', 160, 321, '01', 239, 402, 285, 392) }}
+    {{ castle('扶风郡', 446, 241, '01', 477, 276, 527, 266) }}
+    {{ castle('世外坡', 384, 286, '05', 451, 361, 491, 351) }}
+    {{ castle('飞沙关', 513, 187, '01', 521, 196, 561, 186) }}
+    {{ castle('龙门镇', 546, 171, '02', 601, 216, 641, 206) }}
+    {{ castle('凤鸣堡', 174, 547, '04', 213, 576, 253, 566) }}
+    {{ castle('惊虬谷', 161, 438, '01', 283, 498, 323, 488) }}
+    {{ castle('日月崖', 406, 408, '02', 483, 482, 523, 472) }}
+    {{ castle('卧龙坡', 377, 529, '03', 471, 578, 511, 568) }}
+    {{ castle('啖杏林', 653, 205, '01', 667, 226, 687, 266) }}
+    {{ castle('枫湖寨', 650, 254, '03', 729, 294, 759, 284) }}
+    {{ castle('不空关', 543, 422, '04', 631, 446, 671, 436) }}
+    {{ castle('激流坞', 583, 485, '01', 609, 520, 649, 510) }}
+    {{ castle('澜沧城', 274, 680, '03', 321, 772, 361, 762) }}
+    {{ castle('霜戈堡', 201, 656, '01', 253, 694, 293, 684) }}
+    {{ castle('金门关', 788, 177, '04', 835, 266, 875, 256) }}
+    {{ castle('青云坞', 884, 198, '01', 919, 232, 959, 222) }}
+    {{ castle('逐鹿坪', 724, 445, '03', 773, 488, 813, 478) }}
+    {{ castle('盘龙坞', 653, 530, '05', 729, 590, 769, 580) }}
+    {{ castle('千岩关', 456, 635, '01', 541, 788, 581, 778) }}
+    {{ castle('大理山城', 455, 660, '04', 487, 676, 527, 666) }}
+    {{ castle('秋雨堡', 774, 372, '01', 825, 424, 865, 414) }}
+    {{ castle('红莲岗', 758, 313, '02', 849, 338, 889, 328) }}
+    {{ castle('武王城', 713, 484, '武王城', 857, 614, 917, 604) }}
+
+    <div class="sand-castle" data-castle="浩气盟">
+        <img class="sand-layer sand-layer--territory" style="left:834px;top:577px" src="{{ image('浩_浩气盟') }}" alt="">
+        <img class="sand-layer sand-layer--icon" style="left:913px;top:676px" src="{{ image('图标_浩_浩气盟') }}" alt="">
+        <span class="sand-castle__name" style="left:983px;top:686px">浩气盟</span>
+    </div>
+
+    <img class="sand-map__frontline" src="{{ image('阵营防线') }}" alt="">
+</main>

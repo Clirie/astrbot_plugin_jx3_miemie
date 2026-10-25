@@ -1,0 +1,43 @@
+{# template-title: 技能详情 #}
+{# template-components: data-layout ability-card #}
+
+
+<div class="container data-page">
+    <h1>{{ name }} 技能详情</h1>
+    <div class="data-page__meta">更新时间：{{ update_time }}</div>
+
+    {% for group in groups %}
+    <div class="data-section">
+        <div class="data-section__title">{{ group.title }}</div>
+        <div class="card-grid" style="--grid-columns: 2; --grid-gap: 14px">
+            {% for skill in group.skills %}
+            <div class="ability-card">
+                {% if skill.icon %}
+                <img class="ability-card__icon" src="{{ skill.icon }}" alt="{{ skill.name }}">
+                {% else %}
+                <div class="ability-card__icon"></div>
+                {% endif %}
+                <div>
+                    <div class="ability-card__head">
+                        <span class="ability-card__name">{{ skill.name }}</span>
+                        {% if skill.interval %}
+                        <span class="ability-card__tag">{{ skill.interval }}</span>
+                        {% endif %}
+                        {% if skill.distance %}
+                        <span class="ability-card__tag">{{ skill.distance }}</span>
+                        {% endif %}
+                        {% if skill.release_type %}
+                        <span class="ability-card__tag">{{ skill.release_type }}</span>
+                        {% endif %}
+                        {% if skill.weapon %}
+                        <span class="ability-card__tag">{{ skill.weapon }}</span>
+                        {% endif %}
+                    </div>
+                    <div class="ability-card__desc">{{ skill.desc }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>

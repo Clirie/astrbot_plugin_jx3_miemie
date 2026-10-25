@@ -1,0 +1,96 @@
+/*
+     * 排名列
+     */
+    .rank-col {
+        color: #d93939;
+        font-size: 20px;
+        font-weight: 800;
+        white-space: nowrap;
+    }
+
+    /*
+     * 头像列
+     */
+    .avatar-col,
+    .force-col {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .avatar {
+        display: block;
+        width: 46px;
+        height: 46px;
+        margin: 0 auto;
+        border-radius: 50%;
+        object-fit: cover;
+        background: #eef2f8;
+    }
+
+    /*
+     * 职业列
+     */
+    .force {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        width: 100%;
+        min-width: 0;
+        color: var(--jx3-text);
+        font-size: 19px;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .force-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: contain;
+        flex: 0 0 auto;
+        background: #eef2f8;
+    }
+
+    .force-name,
+    .role-name-col,
+    .server-col {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /*
+     * 角色列
+     */
+    .role-name-col {
+        padding-left: 10px;
+        padding-right: 10px;
+        color: var(--jx3-text);
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    /*
+     * 服务器列
+     */
+    .server-col {
+        padding-left: 8px;
+        padding-right: 8px;
+        color: var(--jx3-text-secondary);
+        font-size: 19px;
+    }
+
+    /*
+     * 资历列
+     */
+    .score-col {
+        padding-left: 6px;
+        padding-right: 10px;
+        color: #d93939;
+        font-size: 20px;
+        font-weight: 800;
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+    }

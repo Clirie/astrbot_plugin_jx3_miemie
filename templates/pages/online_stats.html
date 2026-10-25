@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title> — 物价</title><style>:root{--font-body:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Helvetica Neue",sans-serif;--color-page:#eeeeef;--color-paper:#fff;--color-ink:#1d1d1f;--color-muted:#65656b;--color-rule:#e5e5ea;--color-group:#f5f5f7;--color-trace:#007aff;--color-blue:#006bd6;--color-grid:#ededf1;--space-xs:4px;--space-s:8px;--space-m:12px;--space-l:16px;--space-xl:20px;--space-xxl:24px}
+
+:root{--color-secondary:var(--color-muted);--color-older:#76767c}
+
+:root{--color-row:#f7f7f9;--radius-art:18px;--radius-facts:14px}
+
+/* Warm paper, mineral surfaces and one ink-blue emphasis. */
+:root{--color-page:#e9edee;--color-paper:#fcfbf8;--color-ink:#202e38;--color-muted:#5b6770;--color-rule:#d8dfe2;--color-group:#f0f3f3;--color-trace:#4b718b;--color-blue:#294f6a;--color-grid:#e3e8e9;--color-secondary:var(--color-muted);--color-older:#66737b;--color-row:#f2f4f3;--color-highlight:#e5edf1;--color-done:#346354;--color-buy:#795e35;--color-art:#fff;--radius-art:12px;--radius-facts:8px}
+
+/* Hallmark · macrostructure: product plate, paired headline ledgers, trades, compact trend
+   tone: precise system typography · anchor: ink blue
+   Hallmark · pre-emit critique: P4 H5 E4 S5 R5 V4 */
+
+*{box-sizing:border-box}html,body{margin:0;overflow-x:clip}body{font-family:var(--font-body);background:var(--color-page);color:var(--color-ink);font-size:20px;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}h1,h2,p,dl,dd{margin:0}h1,h2{font-style:normal;min-width:0;overflow-wrap:anywhere}h2{font-size:24px;line-height:1.3;font-weight:600;letter-spacing:-.4px}.report{max-width:600px;margin:auto;background:var(--color-paper)}.product{background:var(--color-group);padding:16px}.art{border-radius:16px;overflow:clip}.poster{display:block;width:100%;height:auto;overflow:hidden}.product-info{padding:16px 8px 8px}.identity{display:flex;justify-content:space-between;align-items:center}h1{font-size:36px;line-height:1.25;font-weight:650;letter-spacing:-1px}.identity p{color:var(--color-muted);font-size:20px;line-height:1.5;margin-top:2px}.retail{text-align:right}.retail strong{font-size:36px;font-weight:550;letter-spacing:-1px;line-height:1.25}.retail strong span{font-size:24px;margin-right:3px}.sale-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:20px;padding:16px 0;border-top:1px solid var(--color-rule);border-bottom:1px solid var(--color-rule)}.sale-facts>div+div{border-left:1px solid var(--color-rule);padding-left:16px}dt{font-size:20px;color:var(--color-muted);line-height:1.5}dd{font-size:24px;font-weight:600;line-height:1.5;letter-spacing:-.6px}dd span{font-size:20px;font-weight:500}.description{font-size:20px;line-height:1.5;margin-top:12px;text-wrap:balance}.content{padding:24px}.markets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}.market{min-width:0}.market+.market{border-left:1px solid var(--color-rule);padding-left:32px}.day-low{font-size:20px;color:var(--color-secondary);line-height:1.5;margin-top:8px;white-space:nowrap}.headline{display:flex;align-items:baseline;gap:4px;margin-top:4px;margin-bottom:20px;letter-spacing:-1.8px}.currency{font-size:30px;font-weight:400;letter-spacing:-.4px}.headline strong{font-size:56px;line-height:1.1;font-weight:500}table{border-collapse:collapse;width:100%;table-layout:fixed}th,td{padding:0;text-align:left;font-size:20px;font-weight:400;white-space:nowrap}th{height:34px;color:var(--color-secondary);border-bottom:1px solid var(--color-rule)}td{height:28px;line-height:1.3}td:last-child,th:last-child{text-align:right}.quote{font-size:21px;letter-spacing:-.2px;font-weight:400}.past{color:var(--color-older)}.current{color:var(--color-ink)}.new-day td{border-top:1px solid var(--color-rule)}time{font-size:20px}.current time{color:var(--color-secondary)}.market tbody tr:first-child td,.market tbody tr.new-day td{padding-top:6px;height:34px}.market th:first-child{width:60%}.market th:last-child{width:40%}.trades,.trend{margin-top:24px;padding-top:24px;border-top:1px solid var(--color-rule)}.trades table{margin-top:8px}.trades th:first-child{width:34%}.trades th:nth-child(2){width:23%}.trades th:nth-child(3){width:25%}.trades th:last-child{width:18%}.trades td{height:34px}.trades time{color:var(--color-muted)}.status{font-size:20px;color:var(--color-muted)}.status.done{color:var(--color-ink);font-weight:550}.price{font-size:21px;font-weight:400;letter-spacing:-.2px}.price span{font-size:20px;margin-right:3px}.trend-top{display:flex;align-items:center;justify-content:space-between}.trend p{font-size:20px;color:var(--color-muted);line-height:1.5;margin-top:4px}.latest{text-align:right}.latest strong{font-size:32px;line-height:1;font-weight:500;letter-spacing:-.7px}.latest strong span{font-size:22px;margin-right:2px}.chart{display:block;width:100%;height:auto;overflow:visible;margin-top:8px}.gridline{stroke:var(--color-grid);stroke-width:1}.trace{fill:none;stroke:var(--color-trace);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.point{fill:var(--color-trace)}.axis{font-size:21px;fill:var(--color-muted)}.val{font-size:21px;font-weight:550;fill:var(--color-ink)}footer{text-align:right;padding-top:12px;margin-top:8px;border-top:1px solid var(--color-rule);font-size:20px;color:var(--color-muted)}
+@media(max-width:500px){body{font-size:14px}.product{padding:12px}.product-info{padding:12px 4px 4px}.art{border-radius:12px}.content{padding:16px}.identity p,dt,dd span,.description{font-size:14px}h1{font-size:28px}.retail strong{font-size:28px}.retail strong span{font-size:18px}.sale-facts{margin-top:12px;padding:12px 0}.sale-facts>div+div{padding-left:8px}dd{font-size:17px}h2{font-size:19px}.markets{gap:20px}.market+.market{padding-left:20px}.day-low,th,td,time{font-size:14px}.headline strong{font-size:42px}.currency{font-size:23px}.headline{margin-bottom:16px}.quote{font-size:16px}td{height:25px}th{height:29px}.market tbody tr:first-child td,.market tbody tr.new-day td{height:31px}.trades td{height:29px}.trades,.trend{margin-top:16px;padding-top:16px}.price{font-size:16px}.price span,.status,.trend p,footer{font-size:13px}.latest strong{font-size:25px}.latest strong span{font-size:16px}.axis,.val{font-size:26px}}
+@media(max-width:350px){.content{padding:12px}.markets{gap:16px}.market+.market{padding-left:16px}.day-low,th,td,time{font-size:13px}h2{font-size:17px}.headline strong{font-size:38px}.quote{font-size:15px}.sale-facts>div+div{padding-left:6px}dt{font-size:13px}dd{font-size:15px}}
+
+/* Whole-page refinement: unified margins, clear metadata, quiet tabular detail. */
+.product{padding:24px;background:var(--color-paper)}.identity{margin-bottom:20px}.identity p{margin-top:4px}.retail p{margin-top:0;margin-bottom:2px}.art{border-radius:var(--radius-art)}.sale-facts{background:var(--color-group);border:0;border-radius:var(--radius-facts);padding:16px;margin-top:16px}.sale-facts>div+div{border:0;padding-left:12px}.description{margin-top:12px;color:var(--color-muted)}.content{padding-top:0}.markets{border-top:1px solid var(--color-rule);padding-top:24px}.section-heading{display:flex;justify-content:space-between;align-items:baseline}.section-heading>span{color:var(--color-muted);font-size:20px}.trades table{border-collapse:separate;border-spacing:0;margin-top:12px}.trades th:first-child{width:32%}.trades th:nth-child(2){width:22%}.trades th:nth-child(3){width:24%}.trades th:last-child{width:22%}.trades th:first-child,.trades td:first-child{padding-left:8px}.trades th:last-child,.trades td:last-child{padding-right:8px}.trades tbody tr:nth-child(even){background:var(--color-row)}.trades tbody tr:last-child .price{font-weight:550}.trades th{height:36px}.trades td{height:36px}.trend-top{gap:12px}.trend-top>div{display:flex;gap:16px;align-items:baseline}.trend-top p{margin:0}.trend-top>time{font-size:20px;color:var(--color-muted);white-space:nowrap}.trend-body{display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:center;margin-top:12px}.trend-summary>p{font-size:20px;margin:0 0 4px;color:var(--color-muted)}.trend-price{display:block;font-size:44px;line-height:1.15;letter-spacing:-1px;font-weight:500}.trend-price>span{font-size:26px;margin-right:3px}.period-change{display:flex;gap:8px;align-items:baseline;margin-top:8px}.period-change>span{font-size:20px;font-weight:500;white-space:nowrap}.period-change p{font-size:20px;white-space:nowrap;margin:0;color:var(--color-muted)}.trend-summary{min-width:0}.chart{margin:0}.axis,.val{font-size:22px}.trace{stroke-width:2}.trend .gridline{stroke:var(--color-rule)}footer{padding-top:16px;margin-top:12px}
+@media(max-width:500px){.product{padding:16px}.identity{margin-bottom:16px}.art{border-radius:14px}.sale-facts{padding:12px;margin-top:12px;border-radius:12px}.sale-facts>div+div{padding-left:8px}.markets{padding-top:20px}.section-heading>span{font-size:13px}.trades th{height:30px}.trades td{height:30px}.trend-top{gap:8px}.trend-top>div{gap:8px}.trend-top p,.trend-top>time{font-size:13px}.trend-body{grid-template-columns:82px minmax(0,1fr);gap:16px;margin-top:12px}.trend-summary>p{font-size:13px}.trend-price{font-size:32px}.trend-price>span{font-size:20px}.period-change{display:block;margin-top:6px}.period-change>span{font-size:16px}.period-change p{font-size:13px;margin-top:2px}.axis,.val{font-size:23px}}
+@media(max-width:350px){.product{padding:12px}.sale-facts{padding:10px}.sale-facts>div+div{padding-left:6px}.trend-top{align-items:flex-start}.trend-top>div{display:block}.trend-top p{margin-top:4px}.trend-top>time{font-size:13px;padding-top:3px}.trend-body{grid-template-columns:74px minmax(0,1fr);gap:12px}.axis,.val{font-size:26px}}
+/* Data-driven optional content. No per-product style selectors. */
+.identity>div:first-child{min-width:0;flex:1;padding-right:16px}.retail{flex-shrink:0}.sale-facts{grid-template-columns:repeat(var(--fact-columns),minmax(0,1fr));row-gap:16px}dd{white-space:normal;overflow-wrap:anywhere}.markets{grid-template-columns:repeat(var(--market-columns),minmax(0,1fr));align-items:start}.market .day-low{font-size:20px}.market.with-remaining th:first-child{width:27%}.market.with-remaining th.remaining{width:49%}.market.with-remaining th:last-child{width:24%}.remaining{padding:0 4px;font-size:20px;white-space:nowrap}.market.with-remaining th{height:36px}.market.with-remaining td{height:35px}.trades.with-source th:first-child{width:29%}.trades.with-source th:nth-child(2){width:22%}.trades.with-source th:nth-child(3){width:14%}.trades.with-source th:nth-child(4){width:21%}.trades.with-source th:last-child{width:14%}.source{font-size:20px;color:var(--color-muted)}.trend-top>div{min-width:0}.trend-top>time{flex-shrink:0}.market .headline strong{overflow-wrap:anywhere}
+@media(max-width:500px){.market .day-low{font-size:14px}.remaining{font-size:14px;padding:0 2px}.market.with-remaining td{height:30px}.market.with-remaining th{height:29px}.source{font-size:13px}.trades.with-source td{font-size:13px}.trades.with-source .price{font-size:16px}.trades.with-source th{font-size:13px}.identity>div:first-child{padding-right:12px}.trend-top>div{display:block}.trend-top p{margin-top:4px}.trend-top{align-items:flex-start}.trend-top>time{padding-top:3px}}
+@media(max-width:350px){.market .day-low{font-size:13px}.remaining{font-size:13px}.market.with-remaining td{font-size:13px}.market.with-remaining .quote{font-size:15px}.trades.with-source td:first-child,.trades.with-source th:first-child{padding-left:4px}.trades.with-source td:last-child,.trades.with-source th:last-child{padding-right:4px}}
+
+.market.with-remaining table{table-layout:auto}.market.with-remaining th:first-child,.market.with-remaining th.remaining,.market.with-remaining th:last-child{width:auto}
+
+/* Hallmark · genre: modern-minimal · product / current market / recent ledger / history
+   custom palette: ink blue, mineral surfaces, warm paper
+   pre-emit critique: P4 H5 E4 S5 R5 V4 */
+.identity{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:20px;margin-bottom:20px}.identity>div:first-child{padding-right:0}.identity h1{font-size:34px;letter-spacing:-.8px}.identity .alias{font-size:20px}.retail{display:flex;flex-direction:column;gap:2px;align-items:flex-end;text-align:right;margin-top:0}.retail p{font-size:20px;margin:0;color:var(--color-muted)}.retail strong{font-size:48px;font-weight:600;letter-spacing:-1.2px;color:var(--color-blue);white-space:nowrap;line-height:1.15}.retail strong span{font-size:28px}.art{background:var(--color-art)}
+.sale-facts{background:transparent;padding:14px 0;margin-top:0;border-radius:0;border-bottom:1px solid var(--color-rule)}.sale-facts>div+div{border-left:1px solid var(--color-rule);padding-left:16px}.sale-facts dd{font-size:23px}.description{font-size:20px;line-height:1.5;margin-top:12px}
+.markets{border:0;padding:20px;background:var(--color-group);gap:24px;border-radius:12px}.market+.market{padding-left:24px}.market h2{font-size:23px}.headline{margin-top:6px;margin-bottom:18px;color:var(--color-blue)}.headline strong{font-size:54px;font-weight:550}.market .day-low{font-size:18px}.market td{height:31px}.market.with-remaining td{height:34px}.market th{font-size:18px}.market.with-remaining th.remaining{font-size:18px}.remaining{font-size:18px;padding:0 3px}.market th:last-child{font-size:18px}.market .quote{font-size:21px}.market .current:last-child td{padding-bottom:4px}
+.trades{margin-top:26px;padding-top:0;border-top:0}.section-heading{display:block}.section-heading h2{display:flex;align-items:baseline;gap:14px}.record-count{font-size:18px;font-weight:400;color:var(--color-muted);letter-spacing:0}.section-heading>span{display:block;font-size:18px;margin-top:6px}.trades th{font-size:18px}.trades.with-source th:last-child{width:17%;font-size:18px}.trades.with-source th:nth-child(4){width:18%}.trades td{height:40px}.trades tbody tr.latest-player{background:var(--color-highlight)}.trades tbody tr.latest-player .price{font-weight:650;color:var(--color-blue)}.status.done{color:var(--color-done);font-weight:500}.status.buy{color:var(--color-buy)}.status.sell{color:var(--color-blue)}
+.trend{margin-top:24px;padding-top:20px}.trend-top{align-items:baseline}.trend-top>time{font-size:18px}.trend .trend-context{margin-top:6px;font-size:18px;display:flex;gap:12px;justify-content:space-between}.trend-context span{white-space:nowrap}.chart{margin-top:8px}.axis,.val{font-size:22px}.val{fill:var(--color-blue)}.trace{stroke-width:2.5}.point{r:3.2}footer{font-size:18px;color:var(--color-muted)}
+@media(max-width:500px){.identity h1{font-size:27px}.identity .alias{font-size:14px}.identity{gap:12px}.retail{gap:2px;margin-top:0}.retail p{font-size:16px}.retail strong{font-size:38px}.retail strong span{font-size:23px}.sale-facts{padding:12px 0}.sale-facts>div+div{padding-left:10px}.sale-facts dd{font-size:16px}.description{font-size:14px}.markets{padding:14px;gap:14px;border-radius:10px}.market+.market{padding-left:14px}.market h2{font-size:18px}.market .day-low{font-size:13px}.headline strong{font-size:42px}.headline{margin-bottom:14px}.market th,.market th:last-child,.market.with-remaining th.remaining{font-size:13px}.market td,.market.with-remaining td{height:29px}.remaining{font-size:13px;padding:0 2px}.market .quote{font-size:16px}.trades{margin-top:20px}.record-count,.section-heading>span{font-size:13px}.trades th,.trades.with-source th:last-child{font-size:13px}.trades td,.trades.with-source td{height:33px}.trend{padding-top:16px;margin-top:20px}.trend-top>time,.trend .trend-context{font-size:13px}.axis,.val{font-size:28px}footer{font-size:13px}}
+@media(max-width:350px){.markets{padding:10px;gap:10px}.market+.market{padding-left:10px}.market h2{font-size:17px}.market .quote{font-size:15px}.market .day-low{font-size:13px;letter-spacing:-.35px}.market.with-remaining td{font-size:13px}.remaining{padding:0 1px}.sale-facts>div+div{padding-left:6px}.sale-facts dd{font-size:15px}.trades.with-source th:nth-child(2){width:21%}.trades.with-source th:nth-child(3){width:13%}.trades.with-source th:last-child{width:19%}.trend-top>time{font-size:13px}.axis,.val{font-size:28px}}
+
+
+:root{--font-body:var(--body);--color-page:var(--paper);--color-paper:var(--paper);--color-ink:var(--ink);--color-muted:var(--sub);--color-secondary:var(--sub);--color-older:#81796e;--color-rule:var(--rule);--color-group:rgba(239,230,210,.36);--color-trace:var(--cinnabar);--color-blue:var(--cinnabar);--color-grid:var(--rule);--color-row:rgba(241,236,223,.42);--color-highlight:var(--highlight);--color-done:#56685d;--color-buy:#866844;--color-art:rgba(255,255,255,.45)}
+.report{max-width:768px;position:relative;isolation:isolate;background:var(--paper)}.report .scene-top{height:600px}.report .scene-bottom{height:540px;opacity:.3}.product{background:transparent;padding:96px 40px 22px}.identity h1{font-family:var(--brush);font-weight:400;font-size:52px;line-height:1.15;letter-spacing:-1px}.identity .alias{font-family:var(--body);font-size:21px}.retail p{font-size:22px}.retail strong{font-family:var(--numbers);font-size:48px;font-weight:500}.retail strong span{font-size:28px}.art{border-radius:3px;border:1px solid var(--rule);box-shadow:0 1px 0 rgba(255,255,255,.6)}.poster{object-fit:contain}.sale-facts{padding:16px 0;border-bottom:1px solid var(--rule);row-gap:14px}.sale-facts dt{font-size:20px}.sale-facts dd{font-size:25px;font-weight:400;line-height:1.35;margin-top:3px}.description{font-size:21px;color:var(--sub);text-wrap:initial;line-height:1.5}.content{padding:0 40px 50px}.markets{background:rgba(247,243,231,.48);border:1px solid var(--rule);border-radius:3px;padding:22px 24px;gap:26px}.market+.market{padding-left:26px}.market h2{font-size:28px;font-weight:400}.market .headline strong{font-family:var(--numbers);font-size:52px;font-weight:400}.headline{margin-bottom:18px}.market .day-low{font-size:18px}.market table{font-family:var(--numbers)}.market th{font-family:var(--body);font-size:19px}.market th:last-child,.market.with-remaining th.remaining{font-size:19px}.market td,.market.with-remaining td{height:32px}.market .quote{font-size:22px}.remaining{font-size:18px;font-family:var(--body)}.trades,.trend{background:rgba(247,243,231,.27)}.trades h2,.trend h2{font-size:28px;font-weight:400}.record-count,.section-heading>span,.trend-top>time{font-size:18px}.trades th,.trades.with-source th:last-child{font-size:19px}.trades td{font-size:22px;height:38px}.trades time,.trades .price{font-family:var(--numbers);font-size:20px}.source,.status{font-size:20px}.trades tbody tr.latest-player .price{font-weight:500}.trend .trend-context{font-size:19px}.chart{font-family:var(--numbers);max-height:190px}.axis,.val{font-size:19px}.trace{stroke-width:2}.val{font-weight:400}footer{font-family:var(--numbers);font-size:16px}
+@media(max-width:500px){.product{padding:75px 18px 18px}.content{padding:0 18px 36px}.identity h1{font-size:33px}.identity .alias{font-size:16px}.retail p{font-size:17px}.retail strong{font-size:35px}.retail strong span{font-size:20px}.sale-facts dt{font-size:15px}.sale-facts dd{font-size:18px}.description{font-size:16px}.markets{padding:14px 12px;gap:14px}.market+.market{padding-left:14px}.market h2{font-size:21px}.market .day-low{font-size:13px}.market .headline strong{font-size:39px}.market th,.market th:last-child,.market.with-remaining th.remaining{font-size:13px}.market .quote{font-size:17px}.remaining{font-size:14px}.market td,.market.with-remaining td{height:29px}.trades h2,.trend h2{font-size:23px}.record-count,.section-heading>span,.trend-top>time{font-size:14px}.trades th,.trades.with-source th:last-child{font-size:13px}.trades td,.trades.with-source td{font-size:15px}.trades time,.trades .price{font-size:14px}.status,.source{font-size:14px}.trend .trend-context{font-size:14px}.axis,.val{font-size:24px}footer{font-size:13px}}
+.trend-legend{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:9px;color:var(--sub);font-size:18px;line-height:1.4}.trend-legend>span{display:flex;align-items:center;gap:7px;white-space:nowrap}.trend-legend svg{width:24px;height:10px;flex:none}.history-chart{max-height:210px}.trend-top{flex-wrap:wrap;gap:5px 16px}@media(max-width:500px){.trend-legend{font-size:13px;gap:6px 14px}.trend-legend>span{gap:4px}.trend-legend svg{width:18px}.history-chart .axis{font-size:22px}}
+.history-value{font-family:var(--numbers);font-size:18px;font-weight:500;paint-order:stroke;stroke:var(--paper);stroke-width:3px;stroke-linejoin:round}
+.history-note{font-size:16px;color:var(--sub);margin-top:3px;line-height:1.4}@media(max-width:500px){.history-note{font-size:12px}}.status>span{display:inline-block}@media(max-width:350px){.trades .status{white-space:normal;line-height:1.1}}/* Hallmark · chart refinement · P4 H5 E5 S5 R5 V4: one reference timeline, ink area, readable actual-price labels. */
+.trend .trend-context{flex-wrap:wrap;gap:4px 16px}.history-chart{max-height:none}.history-source{font-size:17px;line-height:1.4;color:var(--sub);margin-top:4px}.history-chart .history-line{stroke-width:1.8}.history-chart .gridline{stroke-opacity:.6}.history-value{font-size:18px;stroke-width:4px}
+@media(max-width:500px){.history-source{font-size:13px}.history-value{font-size:20px}.trend .trend-context span{white-space:normal}}
+</style></head><body>
+<style>
+.sos-wrap{max-width:768px;background:linear-gradient(160deg,#fbfaf7 0%,#f4f6f5 55%,#eef2f3 100%);margin:0 auto;position:relative;isolation:isolate;background:var(--paper);padding:32px 26px 40px;font-family:var(--font-body);color:var(--ink)}
+.sos-title{font-size:34px;font-weight:700;letter-spacing:2px;text-align:center;margin:0 0 6px}
+.sos-sub{text-align:center;color:var(--sub);font-size:15px;margin:0 0 22px;letter-spacing:1px}
+.sos-legend{display:flex;flex-wrap:wrap;gap:6px 18px;background:rgba(255,255,255,.55);border:1px solid var(--rule,#d8dfe2);border-radius:10px;padding:10px 16px;margin-bottom:22px;font-size:14px;color:var(--sub)}
+.sos-legend b{color:var(--ink);font-weight:600}
+.sos-sec{margin-bottom:26px}
+.sos-sec-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.sos-sec-h .t{display:flex;align-items:center;gap:8px;font-size:20px;font-weight:700;color:var(--ink)}
+.sos-sec-h .dot{width:10px;height:10px;border-radius:50%}
+.sos-sec-h .n{font-size:14px;color:var(--sub)}
+.sos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.sos-card{display:flex;align-items:center;gap:10px;border-radius:10px;padding:10px 12px;border:1px solid transparent;background:rgba(255,255,255,.72);min-height:56px}
+.sos-card .ico{width:34px;height:34px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.sos-card .ico img{max-width:100%;max-height:100%;object-fit:contain}
+.sos-card .info{min-width:0;flex:1}
+.sos-card .nm{font-size:16px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.25}
+.sos-card .mt{font-size:13px;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.35;margin-top:2px}
+.sos-on .card,.sos-card.on{background:rgba(226,246,232,.85);border-color:rgba(70,160,95,.35)}
+.sos-app .card,.sos-card.app{background:rgba(226,240,252,.85);border-color:rgba(70,130,200,.30)}
+.sos-off .card,.sos-card.off{background:rgba(245,246,248,.85);border-color:rgba(0,0,0,.05)}
+.sos-empty{color:var(--sub);font-size:14px;padding:10px 4px}
+.sos-help{margin-top:8px;border-top:1px solid rgba(0,0,0,.08);padding-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.sos-help h4{margin:0 0 8px;font-size:15px;color:var(--ink)}
+.sos-help p{margin:4px 0;font-size:13.5px;color:var(--sub);line-height:1.6}
+.sos-help code{font-family:var(--numbers,monospace);color:var(--ink);background:rgba(0,0,0,.04);padding:1px 5px;border-radius:4px;font-size:13px}
+.sos-foot{text-align:center;margin-top:22px;color:var(--sub);font-size:13px}
+</style>
+</head><body>
+<main class="report">
+
+
+<div class="sos-wrap">
+  <h1 class="sos-title">在线统计</h1>
+  <p class="sos-sub">共 {{ total }} 个绑定角色</p>
+  <div class="sos-legend">
+    <span><b>状态说明</b></span>
+    <span>🟢 游戏在线 = 角色已登录游戏</span>
+    <span>🔵 仅推栏在线 = 未登录游戏，只登录了手机推栏</span>
+  </div>
+
+  {% if online_rows %}
+  <section class="sos-sec sos-on">
+    <div class="sos-sec-h"><div class="t"><span class="dot" style="background:#46a05f"></span>游戏在线</div><div class="n">{{ online_rows|length }} 个角色</div></div>
+    <div class="sos-grid">
+      {% for r in online_rows %}
+      <div class="sos-card on">
+        <div class="ico">{% if r.icon %}<img src="{{ r.icon }}" alt="">{% endif %}</div>
+        <div class="info"><div class="nm">{{ r.name }}</div><div class="mt">{{ r.server }}{% if r.force %} · {{ r.force }}{% endif %}</div></div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if app_rows %}
+  <section class="sos-sec sos-app">
+    <div class="sos-sec-h"><div class="t"><span class="dot" style="background:#5b8fd6"></span>仅推栏在线</div><div class="n">{{ app_rows|length }} 个角色</div></div>
+    <div class="sos-grid">
+      {% for r in app_rows %}
+      <div class="sos-card app">
+        <div class="ico">{% if r.icon %}<img src="{{ r.icon }}" alt="">{% endif %}</div>
+        <div class="info"><div class="nm">{{ r.name }}</div><div class="mt">{{ r.server }}{% if r.force %} · {{ r.force }}{% endif %}</div></div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="sos-sec sos-off">
+    <div class="sos-sec-h"><div class="t"><span class="dot" style="background:#b9bfc6"></span>离线</div><div class="n">{{ off_rows|length }} 个角色</div></div>
+    {% if off_rows %}
+    <div class="sos-grid">
+      {% for r in off_rows %}
+      <div class="sos-card off">
+        <div class="ico">{% if r.icon %}<img src="{{ r.icon }}" alt="">{% endif %}</div>
+        <div class="info"><div class="nm">{{ r.name }}</div><div class="mt">{{ r.server }}{% if r.force %} · {{ r.force }}{% endif %}</div></div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="sos-empty">全都在线 ✅</div>
+    {% endif %}
+  </section>
+
+  <div class="sos-help">
+    <div>
+      <h4>使用帮助</h4>
+      <p>查询绑定角色状态：<code>在线统计</code></p>
+      <p>绑定角色：<code>绑定角色 服务器 角色名</code></p>
+      <p>解绑角色：<code>解绑角色 服务器 角色名</code></p>
+      <p>查看列表：<code>角色列表</code></p>
+    </div>
+    <div>
+      <h4>说明</h4>
+      <p>1. 角色过图时可能暂时无法确认状态，建议稍后再查</p>
+      <p>2. 最多绑定 20 个角色</p>
+      <p>3. 数据来自第三方在线服务，仅供参考</p>
+    </div>
+  </div>
+  <div class="sos-foot">🟢 在线 {{ online_rows|length + app_rows|length }} 个　⚪ 离线 {{ off_rows|length }} 个　·　{{ data_time|default('') }}</div>
+</div>
+</main>
+</body></html>

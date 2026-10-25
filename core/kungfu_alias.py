@@ -1,0 +1,286 @@
+import json
+from collections.abc import Iterable
+from pathlib import Path
+from typing import Any
+
+from .sqlite import AsyncSQLiteDB
+
+
+class KungfuAliasService:
+    """维护本地心法名称、JX3BOX 配装 ID 和别名。"""
+
+    MAX_ALIASES = 5
+    ROLE_TYPES = {"T", "HEALER", "DPS"}
+    DEFAULT_T_KUNGFU = {"洗髓经", "铁牢律", "铁骨衣", "明尊琉璃体"}
+    DEFAULT_HEALER_KUNGFU = {
+        "云裳心经",
+        "补天诀",
+        "相知",
+        "灵素",
+        "离经易道",
+    }
+
+    def __init__(self, sqlite: AsyncSQLiteDB, seed_path: Path):
+        self.sql = sqlite
+        self.seed_path = seed_path
+        self._kungfu_lookup: dict[str, str] = {}
+        self._role_type_lookup: dict[str, str] = {}
+
+    async def initialize(self):
+        await self.sql.execute(
+            """
+            CREATE TABLE IF NOT EXISTS kungfu (
+                pzid INTEGER PRIMARY KEY,
+                name TEXT NOT NULL,
+                name1 TEXT,
+                name2 TEXT,
+                name3 TEXT,
+                name4 TEXT,
+                name5 TEXT,
+                role_type TEXT NOT NULL DEFAULT 'DPS'
+                    CHECK(role_type IN ('T', 'HEALER', 'DPS'))
+            )
+            """
+        )
+        columns = await self.sql.fetch_all("PRAGMA table_info(kungfu)")
+        if "role_type" not in {column["name"] for column in columns}:
+            await self.sql.execute(
+                """
+                ALTER TABLE kungfu
+                ADD COLUMN role_type TEXT NOT NULL DEFAULT 'DPS'
+                    CHECK(role_type IN ('T', 'HEALER', 'DPS'))
+                """
+            )
+            await self._apply_default_role_types()
+        await self._seed_defaults()
+        await self._reload_cache()
+
+    async def _apply_default_role_types(self):
+        for name in self.DEFAULT_T_KUNGFU:
+            await self.sql.execute(
+                "UPDATE kungfu SET role_type='T' WHERE name=?",
+                (name,),
+            )
+        for name in self.DEFAULT_HEALER_KUNGFU:
+            await self.sql.execute(
+                "UPDATE kungfu SET role_type='HEALER' WHERE name=?",
+                (name,),
+            )
+
+    async def _seed_defaults(self):
+        records = self._load_seed_defaults()
+        for values in records:
+            await self.sql.execute(
+                """
+                INSERT OR IGNORE INTO kungfu
+                    (pzid, name, name1, name2, name3, name4, name5, role_type)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                values,
+            )
+
+    def _load_seed_defaults(self) -> list[tuple[Any, ...]]:
+        try:
+            records = json.loads(self.seed_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            raise RuntimeError(f"读取心法种子数据失败：{exc}") from exc
+
+        if not isinstance(records, list):
+            raise RuntimeError("心法种子数据必须是数组")
+
+        normalized_records: list[tuple[Any, ...]] = []
+        seen_pzids: set[int] = set()
+        for record in records:
+            if not isinstance(record, dict):
+                continue
+            pzid = self._parse_pzid(record.get("pzid"))
+            if pzid in seen_pzids:
+                continue
+            seen_pzids.add(pzid)
+            name = self._clean(record.get("name"))
+            aliases = self._normalize_aliases(name, record.get("aliases") or [])
+            values = [*aliases, *([None] * (self.MAX_ALIASES - len(aliases)))]
+            normalized_records.append(
+                (pzid, name, *values, self._default_role_type(name))
+            )
+        return normalized_records
+
+    async def restore_defaults(self) -> int:
+        """使用随插件分发的 JSON 种子完整重写心法表。"""
+        records = self._load_seed_defaults()
+        statements: list[tuple[str, tuple[Any, ...]]] = [
+            ("DELETE FROM kungfu", ()),
+        ]
+        statements.extend(
+            (
+                """
+                INSERT INTO kungfu
+                    (pzid, name, name1, name2, name3, name4, name5, role_type)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                values,
+            )
+            for values in records
+        )
+        await self.sql.execute_transaction(statements)
+        await self._reload_cache()
+        return len(records)
+
+    async def list_kungfu(self) -> list[dict[str, Any]]:
+        rows = await self.sql.fetch_all(
+            "SELECT pzid, name, name1, name2, name3, name4, name5, role_type "
+            "FROM kungfu ORDER BY pzid"
+        )
+        return [
+            {
+                "pzid": int(row["pzid"]),
+                "name": self._clean(row.get("name")),
+                "aliases": [
+                    alias
+                    for key in ("name1", "name2", "name3", "name4", "name5")
+                    if (alias := self._clean(row.get(key)))
+                ],
+                "role_type": self._normalize_role_type(row.get("role_type")),
+            }
+            for row in rows
+        ]
+
+    async def save_aliases(self, pzid: Any, aliases: Iterable[Any]):
+        """只更新已有心法的别名，不允许修改 ID 和标准名称。"""
+        normalized_pzid = self._parse_pzid(pzid)
+        rows = await self.list_kungfu()
+        current = next(
+            (row for row in rows if row["pzid"] == normalized_pzid),
+            None,
+        )
+        if current is None:
+            raise ValueError("心法不存在")
+
+        normalized_name = current["name"]
+        normalized_aliases = self._normalize_aliases(normalized_name, aliases)
+        occupied: dict[str, str] = {}
+        for row in rows:
+            if row["pzid"] == normalized_pzid:
+                continue
+            for value in [row["name"], *row["aliases"]]:
+                occupied[self._key(value)] = row["name"]
+
+        for value in [normalized_name, *normalized_aliases]:
+            conflict = occupied.get(self._key(value))
+            if conflict:
+                raise ValueError(f"“{value}”已被心法“{conflict}”使用")
+
+        values = [
+            *normalized_aliases,
+            *([None] * (self.MAX_ALIASES - len(normalized_aliases))),
+        ]
+        await self.sql.execute(
+            """
+            UPDATE kungfu
+            SET name1=?, name2=?, name3=?, name4=?, name5=?
+            WHERE pzid=?
+            """,
+            (*values, normalized_pzid),
+        )
+        await self._reload_cache()
+
+    async def save_role_type(self, pzid: Any, role_type: Any):
+        """Update the global T/healer/DPS classification of one kungfu."""
+        normalized_pzid = self._parse_pzid(pzid)
+        normalized_role_type = self._normalize_role_type(role_type)
+        affected = await self.sql.execute_affected(
+            "UPDATE kungfu SET role_type=? WHERE pzid=?",
+            (normalized_role_type, normalized_pzid),
+        )
+        if not affected:
+            raise ValueError("心法不存在")
+        await self._reload_cache()
+
+    async def _reload_cache(self):
+        """Refresh the canonical kungfu name and alias lookup cache.
+
+        Returns:
+            None.
+        """
+        rows = await self.list_kungfu()
+        lookup = {self._key(row["name"]): row["name"] for row in rows if row["name"]}
+        for row in rows:
+            for alias in row["aliases"]:
+                lookup.setdefault(self._key(alias), row["name"])
+        self._kungfu_lookup = lookup
+        self._role_type_lookup = {
+            row["name"]: row["role_type"] for row in rows if row["name"]
+        }
+
+    def resolve_kungfu(self, value: Any) -> str:
+        """Resolve a canonical kungfu name or alias to its canonical name.
+
+        Args:
+            value: Canonical kungfu name or configured alias.
+
+        Returns:
+            Canonical kungfu name when matched; otherwise the cleaned input.
+        """
+        kungfu = self._clean(value)
+        return self._kungfu_lookup.get(self._key(kungfu), kungfu)
+
+    def match_kungfu(self, value: Any) -> str | None:
+        """Return a canonical kungfu only when the name or alias is configured."""
+        kungfu = self._clean(value)
+        return self._kungfu_lookup.get(self._key(kungfu))
+
+    def role_type_of(self, value: Any) -> str:
+        """Return the configured role type for a canonical kungfu or alias."""
+        canonical = self.match_kungfu(value)
+        if not canonical:
+            raise ValueError("心法必须是心法配置中的标准名称或别名")
+        return self._role_type_lookup[canonical]
+
+    @classmethod
+    def _default_role_type(cls, name: str) -> str:
+        if name in cls.DEFAULT_T_KUNGFU:
+            return "T"
+        if name in cls.DEFAULT_HEALER_KUNGFU:
+            return "HEALER"
+        return "DPS"
+
+    @classmethod
+    def _normalize_role_type(cls, value: Any) -> str:
+        role_type = cls._clean(value).upper()
+        if role_type not in cls.ROLE_TYPES:
+            raise ValueError("心法职责只能选择 T、奶或 DPS")
+        return role_type
+
+    def _normalize_aliases(self, name: str, aliases: Iterable[Any]) -> list[str]:
+        result: list[str] = []
+        seen: set[str] = {self._key(name)}
+        for value in aliases:
+            alias = self._clean(value)
+            key = self._key(alias)
+            if not alias or key in seen:
+                continue
+            if len(alias) > 64:
+                raise ValueError(f"心法别名过长：{alias}")
+            seen.add(key)
+            result.append(alias)
+        if len(result) > self.MAX_ALIASES:
+            raise ValueError(f"每个心法最多配置 {self.MAX_ALIASES} 个别名")
+        return result
+
+    @staticmethod
+    def _parse_pzid(value: Any) -> int:
+        try:
+            pzid = int(value)
+        except (TypeError, ValueError) as exc:
+            raise ValueError("心法 ID 必须是整数") from exc
+        if pzid <= 0:
+            raise ValueError("心法 ID 必须大于 0")
+        return pzid
+
+    @staticmethod
+    def _clean(value: Any) -> str:
+        return str(value or "").strip()
+
+    @classmethod
+    def _key(cls, value: Any) -> str:
+        return cls._clean(value).casefold()

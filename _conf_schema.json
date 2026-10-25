@@ -1,0 +1,189 @@
+{
+  "privacy_logging": {
+    "description": "群聊日志隐私保护",
+    "type": "bool",
+    "default": true,
+    "hint": "插件运行期间过滤 AstrBot 聊天收发日志、Trace 和消息处理调试原文，异常保留类型与代码位置。作用于控制台、日志文件与 WebUI，不改变消息接收、指令处理和业务数据。既有历史日志不会自动删除。"
+  },
+  "prefix": {
+    "description": "指令前缀",
+    "type": "object",
+    "items": {
+      "enable": {
+        "description": "是否启用",
+        "type": "bool",
+        "default": false,
+        "hint": "是否启用指令前缀检查功能"
+      },
+      "text": {
+        "description": "前缀内容",
+        "type": "string",
+        "default": "剑三",
+        "hint": "为了避免和其他插件的指令冲突可以增加指令前缀；开启后内容为空或只有空格时按未开启前缀处理。"
+      }
+    }
+  },
+  "jx3api_token": {
+    "description": "JX3API Token",
+    "type": "string",
+    "default": "",
+    "hint": "前往https://www.jx3api.com/注册并购买Token。"
+  },
+  "jx3api_ticket": {
+    "description": "推栏标识",
+    "type": "string",
+    "default": "",
+    "hint": "通过抓包推栏APP账号登录信息获取推栏标识。"
+  },
+  "dungeon_cd_focus": {
+    "description": "副本 CD 主流秘境",
+    "type": "list",
+    "default": [
+      "阆风悬城·元心殿|25人挑战",
+      "阆风悬城|25人英雄",
+      "阆风悬城|25人普通",
+      "阆风悬城|10人普通",
+      "会战弓月城|25人英雄"
+    ],
+    "hint": "每项填写 副本名|难度。按配置顺序显示；本周周常按日历的团队秘境补充 10 人普通，其他有 CD 记录的副本自动追加。"
+  },
+  "jx3api_wss": {
+    "description": "事件通道地址",
+    "type": "string",
+    "default": "wss://socket.nicemoe.cn",
+    "hint": "事件推送的WebSocket地址。"
+  },
+  "jx3api_wss_token": {
+    "description": "事件推送令牌",
+    "type": "string",
+    "default": "",
+    "hint": "用于付费事件推送，不填写只推送免费事件。"
+  },
+  "tls_verify": {
+    "description": "TLS 证书验证",
+    "type": "bool",
+    "default": true,
+    "hint": "验证 JX3API、JX3BOX 和事件推送连接的 TLS 证书。建议保持开启；仅在受信任的调试环境中临时关闭。"
+  },
+  "market_custom_buttons": {
+    "description": "物价 QQ 自定义选款按钮",
+    "type": "bool",
+    "default": false,
+    "hint": "仅在 QQ 开放平台已开通自定义按钮权限后启用。用于 QQ 群聊/私聊的物价候选消息，按钮仅限查询者操作。权限拒绝时自动恢复文字选款；普通 Markdown 权限不代表自定义按钮权限。"
+  },
+  "market_history_enabled": {
+    "description": "物价补充长期历史",
+    "type": "bool",
+    "default": true,
+    "hint": "从爱剑三补充在售日均价与长期报价，按日期融合成参考价格面积图；无成交的日期不使用沿用的历史成交价。接口不可用时使用现有有效报价。"
+  },
+  "team_management": {
+    "description": "团队管理",
+    "type": "object",
+    "items": {
+      "view_output": {
+        "description": "查看团队输出方式",
+        "type": "string",
+        "options": [
+          "图片",
+          "文本"
+        ],
+        "default": "图片",
+        "hint": "控制“查看团队”指令使用图片还是纯文本回复。"
+      },
+      "blacklist_provider": {
+        "description": "黑本模型配置",
+        "type": "string",
+        "default": "",
+        "_special": "select_provider",
+        "hint": "团队黑本使用的对话模型；留空时使用当前会话的默认对话模型。"
+      },
+      "blacklist_prompt": {
+        "description": "黑本提示词",
+        "type": "text",
+        "default": "你是剑网3团队管理助手。请从团队成员中选择一名加入团队黑本。必须且只能选择团队数据中真实存在的一个角色，并严格使用以下格式回复：\n角色名：角色名称\n理由：简短明确的理由\n理由需要主要结合该成员的角色名称、不要参考心法、职责或老板标记，不要编造团队数据中不存在的信息，也不要输出其他内容。",
+        "hint": "此提示词会与指定团队的基本信息及完整成员数据拼接后统一发送给模型。"
+      }
+    }
+  },
+  "image_render_quality": {
+    "description": "图片渲染质量",
+    "type": "object",
+    "items": {
+      "device_scale_factor": {
+        "description": "渲染清晰度",
+        "type": "string",
+        "options": [
+          "1.0",
+          "1.3",
+          "1.8"
+        ],
+        "default": "1.0",
+        "hint": "数值越高越清晰，同时图片更大、渲染耗时更多。"
+      },
+      "format": {
+        "description": "输出格式",
+        "type": "string",
+        "options": [
+          "jpeg",
+          "png"
+        ],
+        "default": "jpeg",
+        "hint": "JPEG 文件通常更小；PNG 为无损格式但文件更大。透明背景的特殊页面仍会自动使用 PNG。"
+      },
+      "jpeg_quality": {
+        "description": "JPEG 质量",
+        "type": "int",
+        "default": 100,
+        "slider": {
+          "min": 1,
+          "max": 100,
+          "step": 1
+        },
+        "hint": "仅输出格式为 JPEG 时生效；数值越高细节越完整，文件也越大。"
+      }
+    }
+  },
+  "local_render_service": {
+    "description": "自建本地渲染服务（更快，推荐开启）",
+    "type": "bool",
+    "default": true,
+    "hint": "开启后自动安装并启动本地渲染服务：实测比默认服务快 6~9 倍。"
+  },
+  "online_api_url": {
+    "description": "角色在线查询服务地址（域名或完整接口地址）",
+    "type": "string",
+    "default": "",
+    "hint": "只填域名会自动拼 /role_online；也可以直接填完整接口地址。在线查询依赖第三方服务（如池清川分析器），需要它自己的令牌。"
+  },
+  "online_api_token": {
+    "description": "角色在线查询服务的令牌",
+    "type": "string",
+    "default": "",
+    "hint": "第三方在线接口需要 token。"
+  },
+  "doubao_api_key": {
+    "description": "豆包（火山方舟）API Key",
+    "type": "string",
+    "default": "",
+    "hint": "去火山方舟控制台创建：https://console.volcengine.com/ark —— 填了才能用「生图」「图生图」"
+  },
+  "doubao_model": {
+    "description": "生图模型 ID",
+    "type": "string",
+    "default": "doubao-seedream-5-0-flash-260915",
+    "hint": "控制台开通哪个就填哪个。推荐 doubao-seedream-4-5-251128（文生图+图生图）"
+  },
+  "doubao_size": {
+    "description": "生成图片尺寸",
+    "type": "string",
+    "default": "1024x1024",
+    "hint": "如 1024x1024 / 1024x1536 / 1536x1024"
+  },
+  "doubao_base_url": {
+    "description": "豆包接口地址（一般不用改）",
+    "type": "string",
+    "default": "https://ark.cn-beijing.volces.com/api/v3",
+    "hint": "方舟 API 的 base url"
+  }
+}

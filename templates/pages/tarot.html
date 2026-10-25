@@ -1,0 +1,34 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>塔罗牌</title><style>/*__DAILY_CSS__*/
+:root{--ink:#332e27;--muted:#7b7161;--rule:#ddd3c4;--paper:#f3efe5}
+body{width:960px;background:var(--paper)}
+.orientation{font-size:27px;color:#927b57;white-space:nowrap}
+.reading{font-size:29px;line-height:1.7}
+.single{min-height:1280px;padding:42px 54px 36px;display:flex;flex-direction:column}
+.single-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px}
+.single-head h1{font:500 45px/1.4 DailySans,sans-serif}
+.single-head .orientation{margin-left:18px;font-size:28px}
+.single .question{font-size:27px;line-height:1.5;margin-top:20px}
+.single-art{height:560px;width:328px;flex-shrink:0;margin:32px auto 28px;filter:drop-shadow(0 12px 15px #59422324)}
+.single-copy .keywords{font-size:24px;color:#978261;margin-bottom:12px}
+.details{margin-top:26px;padding-top:23px;border-top:1px solid #d5cab6}
+.detail{display:grid;grid-template-columns:116px 1fr;gap:22px}
+.detail h2{font-size:23px;color:#8b7654;padding-top:2px}
+.detail p{font-size:25px;line-height:1.65;color:#625747}
+.detail+.detail{margin-top:17px}
+.spread{padding:38px 48px}
+.spread-head{display:flex;align-items:baseline;justify-content:space-between;gap:28px;padding-bottom:28px}
+.spread-head h1{font:400 32px/1.4 DailySans,sans-serif}
+.triptych{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin:0 -48px;padding:0 48px 28px}
+.card-preview{text-align:center}
+.card-preview .position{font-size:25px;color:#8c7851;margin-bottom:16px}
+.card-preview .art{height:370px;width:216px;margin:auto;filter:drop-shadow(0 8px 12px #59422324)}
+.card-preview figcaption{font:400 31px/1.4 DailySans,sans-serif;margin-top:16px}
+.card-preview .orientation{display:block;font-size:23px;color:#8c7851;margin-top:8px}
+.readings{background:#faf7f0;border-radius:18px;padding:0 30px}
+.reading-row{padding:28px 0;border-bottom:1px solid var(--rule)}
+.reading-row:last-child{border-bottom:0}
+.reading-row h2{font:400 31px/1.3 DailySans,sans-serif;margin-bottom:12px}
+.reading-row .orientation{font-size:24px;margin-left:10px}
+.reading-row .reading{font-size:27px}
+.lore{font-size:24px;line-height:1.65;color:var(--muted);margin-top:14px}
+</style></head><body>{% autoescape true %}{% if cards|length == 1 %}{% set card=cards[0] %}<main class="single"><header class="single-head"><h1>{{ card.name }}<span class="orientation">{{ card.orientation }}</span></h1><time data-jx3-data-time>{{ date }}</time></header>{% if question %}<p class="question">{{ question }}</p>{% endif %}<figure class="single-art art"><img class="{% if card.reversed_card %}reversed{% endif %}" src="{{ card.image }}" alt="{{ card.name }}"></figure><div class="single-copy"><p class="keywords">{{ card.keywords|join(' · ') }}</p><p class="reading">{{ card.reading }}</p></div><div class="details"><section class="detail"><h2>牌面意象</h2><p>{{ card.symbolism }}</p></section>{% if topic_key in ['综合','感情'] or daily %}<section class="detail"><h2>牌面故事</h2><p>{{ card.story }}</p></section>{% endif %}</div></main>{% else %}<main class="spread"><header class="spread-head"><h1>{{ question }}</h1><time data-jx3-data-time>{{ date }}</time></header><section class="triptych">{% for card in cards %}<figure class="card-preview"><p class="position">{{ card.position }}</p><div class="art"><img class="{% if card.reversed_card %}reversed{% endif %}" src="{{ card.image }}" alt="{{ card.name }}"></div><figcaption>{{ card.name }}<span class="orientation">{{ card.orientation }}</span></figcaption></figure>{% endfor %}</section><section class="readings">{% for card in cards %}<article class="reading-row"><div><h2>{{ card.position }} · {{ card.name }} <span class="orientation">{{ card.orientation }}</span></h2><p class="reading">{{ card.reading }}</p>{% if topic_key in ['综合','感情'] %}<p class="lore">{{ card.story }}</p>{% endif %}</div></article>{% endfor %}</section></main>{% endif %}{% endautoescape %}</body></html>

@@ -1,0 +1,16 @@
+name: astrbot_plugin_jx3_miemie
+display_name: 剑网三咩咩 
+desc: 聚合剑网三游戏数据，提供查询、团队管理、图片渲染、本地避雷和实时事件推送。
+version: 1.1.0
+author: chunshenya 
+repo: https://github.com/chunshenya/JX3MIEMIE.git
+astrbot_version: ">=4.24.1"
+support_platforms:
+  - aiocqhttp
+  - weixin_oc
+  - qq_official
+  
+
+## 修改说明
+# 本项目基于 astrbot_plugin_jx3（作者：飞翔大野猪）修改
+# 修改日期：2026-09-21

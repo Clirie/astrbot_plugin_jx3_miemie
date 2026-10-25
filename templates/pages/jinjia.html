@@ -1,0 +1,118 @@
+{# template-title: {{ server }} - 金价行情 #}
+
+<style>
+.jx3-template--jinjia { --jx3-page-width: 760px; }
+
+.jj-page { font-family: var(--jx3-font); color: #1f1e1d; }
+
+.jj-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; }
+.jj-head h1 { margin: 0; font-size: 26px; font-weight: 700; }
+.jj-head .jj-src {
+    font-size: 14px; color: #b0ada4;
+    background: #f5f4ef; border: 1px solid #eceae3;
+    padding: 3px 12px; border-radius: 999px;
+}
+.jj-head .jj-tip { margin-left: auto; font-size: 13px; color: #bcb9b0; }
+
+.jj-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 14px; }
+.jj-stat {
+    background: #fff; border: 1px solid #ecebe4; border-radius: 14px;
+    padding: 14px 16px;
+}
+.jj-stat span { display: block; font-size: 13px; color: #a8a49b; margin-bottom: 3px; }
+.jj-stat strong {
+    font-size: 24px; font-weight: 700; font-variant-numeric: tabular-nums;
+    color: #1f1e1d;
+}
+.jj-stat--main strong { color: #c96442; }
+.jj-stat em { font-style: normal; font-size: 13px; color: #b0ada4; margin-left: 6px; }
+
+.jj-card {
+    background: #fff; border: 1px solid #ecebe4; border-radius: 14px;
+    padding: 16px 18px 8px;
+}
+.jj-card__title {
+    display: flex; align-items: center; gap: 9px;
+    margin: 0 0 12px; font-size: 17px; font-weight: 700; color: #3f3a35;
+}
+.jj-card__title::before {
+    content: ""; width: 4px; height: 16px; border-radius: 2px; background: #c96442;
+}
+.jj-card__title .jj-count { margin-left: auto; font-size: 13px; font-weight: 500; color: #b5b2aa; }
+
+table.jj-table { width: 100%; border-collapse: collapse; }
+table.jj-table th {
+    padding: 6px 4px 8px; font-size: 14px; font-weight: 500; color: #b0ada4;
+    text-align: left; border-bottom: 1px solid #f2f0ea;
+}
+table.jj-table td {
+    padding: 9px 4px; font-size: 15px; color: #4a4945;
+    border-bottom: 1px solid #f7f6f2;
+}
+table.jj-table tr:last-child td { border-bottom: 0; }
+table.jj-table .jj-date { font-variant-numeric: tabular-nums; color: #6b6660; }
+table.jj-table .jj-price {
+    text-align: right; font-weight: 700; font-variant-numeric: tabular-nums;
+    color: #c96442;
+}
+table.jj-table .jj-bar { width: 34%; padding-right: 8px; }
+.jj-bar__inner { height: 6px; border-radius: 3px; background: #f6e2d9; }
+.jj-bar__fill { height: 6px; border-radius: 3px; background: #d97757; }
+.jj-empty { padding: 22px 0; text-align: center; color: #bebbb3; font-size: 15px; }
+</style>
+
+<div class="jj-page">
+
+    <div class="jj-head">
+        <h1>{{ server }}</h1>
+        <span class="jj-src">数据源：万宝楼</span>
+        <span class="jj-tip">其余平台接口长期返回恒定值，已剔除</span>
+    </div>
+
+    {% if items %}
+    <div class="jj-stats">
+        <div class="jj-stat jj-stat--main">
+            <span>最新金价{% if latest_date %}（{{ latest_date }}）{% endif %}</span>
+            <strong>{{ latest_price }}</strong><em>元/万金</em>
+        </div>
+        <div class="jj-stat"><span>区间最高</span><strong>{{ highest }}</strong></div>
+        <div class="jj-stat"><span>区间最低</span><strong>{{ lowest }}</strong></div>
+        <div class="jj-stat"><span>样本天数</span><strong>{{ days }}</strong></div>
+    </div>
+
+    <div class="jj-card">
+        <h2 class="jj-card__title">每日金价<span class="jj-count">最近 {{ days }} 天</span></h2>
+        <table class="jj-table">
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th class="jj-bar">相对高低</th>
+                    <th style="text-align:right">价格（元/万金）</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% set hi = highest | replace(',', '') | float %}
+            {% set lo = lowest | replace(',', '') | float %}
+            {% for m in items[:30] %}
+                {% set p = m.price | float %}
+                {% set ratio = 0.5 if hi <= lo else (p - lo) / (hi - lo) %}
+                <tr>
+                    <td class="jj-date">{{ m.date }}</td>
+                    <td class="jj-bar">
+                        <div class="jj-bar__inner">
+                            <div class="jj-bar__fill" style="width: {{ (20 + ratio * 80) | round(1) }}%"></div>
+                        </div>
+                    </td>
+                    <td class="jj-price">{{ m.price }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="jj-card"><div class="jj-empty">没有查到 {{ server }} 的金价数据</div></div>
+    {% endif %}
+
+    {{ trend_svg }}
+
+</div>
