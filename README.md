@@ -502,7 +502,7 @@ astrbot_plugin_jx3_miemie/
 
 - 原项目：[qsc20001102/astrbot_plugin_jx3](https://github.com/qsc20001102/astrbot_plugin_jx3)
 - 数据源：[JX3API](https://www.jx3api.com)“萌萌”、[JX3BOX](https://www.jx3box.com)
-- 数据支持：[Inkar-Suki](https://github.com/Inkar-Suki)（https://inkar-suki.codethink.cn）
+- 数据支持：[Inkar-Suki](https://github.com/Inkar-Suki)
 
 ---
 
