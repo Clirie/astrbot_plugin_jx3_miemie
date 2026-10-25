@@ -4,15 +4,15 @@
 </p>
 
 <p align="center">
-> **修改于飞翔大野猪**
-> 原项目仓库：<https://github.com/qsc20001102/astrbot_plugin_jx3>
+
 
 <p align="center">
   <b>基于 AstrBot 的《剑网3》综合数据查询插件</b>
 </p>
 
 ---
-
+> **修改于飞翔大野猪**
+> 原项目仓库：<https://github.com/qsc20001102/astrbot_plugin_jx3>
 ## ⚠️ 重要声明（请务必先读）
 
 > **角色在线查询功能，第三方连接无法对外提供。**
